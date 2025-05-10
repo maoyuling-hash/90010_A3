@@ -1,30 +1,42 @@
 Summary of SPARK analysis
 =========================
 
---------------------------------------------------------------------------------------------------------
-SPARK Analysis results        Total       Flow   Interval   CodePeer      Provers   Justified   Unproved
---------------------------------------------------------------------------------------------------------
-Data Dependencies                 .          .          .          .            .           .          .
-Flow Dependencies                 .          .          .          .            .           .          .
-Initialization                    9          9          .          .            .           .          .
-Non-Aliasing                      .          .          .          .            .           .          .
-Run-time Checks                  56          .          .          .    56 (CVC4)           .          .
-Assertions                        8          .          .          .     8 (CVC4)           .          .
-Functional Contracts              6          .          .          .     6 (CVC4)           .          .
-LSP Verification                  .          .          .          .            .           .          .
---------------------------------------------------------------------------------------------------------
-Total                            79    9 (11%)          .          .     70 (89%)           .          .
+----------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   Interval   CodePeer       Provers   Justified   Unproved
+----------------------------------------------------------------------------------------------------------
+Data Dependencies                 .           .          .          .             .           .          .
+Flow Dependencies                 .           .          .          .             .           .          .
+Initialization                   13          13          .          .             .           .          .
+Non-Aliasing                      1           1          .          .             .           .          .
+Run-time Checks                 101           .          .          .    101 (CVC4)           .          .
+Assertions                       16           .          .          .     16 (CVC4)           .          .
+Functional Contracts             14           .          .          .     14 (CVC4)           .          .
+LSP Verification                  .           .          .          .             .           .          .
+----------------------------------------------------------------------------------------------------------
+Total                           145    14 (10%)          .          .     131 (90%)           .          .
 
 
 max steps used for successful proof: 1
 
 Analyzed 7 units
-in unit calculatorcommands, 3 subprograms and packages out of 3 analyzed
-  CalculatorCommands at calculatorcommands.ads:6 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  CalculatorCommands.Handle_Lock at calculatorcommands.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
-  CalculatorCommands.Handle_Unlock at calculatorcommands.ads:8 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+in unit calculatorcommands, 15 subprograms and packages out of 15 analyzed
+  CalculatorCommands at calculatorcommands.ads:11 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  CalculatorCommands.Get_Token_String at calculatorcommands.ads:34 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  CalculatorCommands.Handle_Lock at calculatorcommands.ads:21 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  CalculatorCommands.Handle_Push1 at calculatorcommands.ads:27 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (6 checks)
+  CalculatorCommands.Handle_Unlock at calculatorcommands.ads:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  CalculatorCommands.Lines at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  CalculatorCommands.Lines.Equal at mystring.ads:30, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (11 checks)
+  CalculatorCommands.Lines.From_String at mystring.ads:24, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (12 checks)
+  CalculatorCommands.Lines.Get at mystring.ads:42, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  CalculatorCommands.Lines.Get_Line at mystring.ads:45, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  CalculatorCommands.Lines.Length at mystring.ads:35, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  CalculatorCommands.Lines.Less at mystring.ads:28, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
+  CalculatorCommands.Lines.MyString at mystring.ads:18, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  CalculatorCommands.Lines.Substring at mystring.ads:38, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (11 checks)
+  CalculatorCommands.Lines.To_String at mystring.ads:20, instantiated at calculatorcommands.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
 in unit main, 1 subprograms and packages out of 1 analyzed
-  Main at main.adb:16 flow analyzed (0 errors, 0 checks and 3 warnings) and proved (10 checks)
+  Main at main.adb:16 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (4 checks)
 in unit memorystore, 1 subprograms and packages out of 9 analyzed
   MemoryStore at memorystore.ads:3 skipped
   MemoryStore.Database at memorystore.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
