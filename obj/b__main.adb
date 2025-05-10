@@ -20,12 +20,13 @@ package body ada_main is
    E076 : Short_Integer; pragma Import (Ada, E076, "ada__finalization_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__file_io_E");
    E054 : Short_Integer; pragma Import (Ada, E054, "ada__text_io_E");
-   E107 : Short_Integer; pragma Import (Ada, E107, "memorystore_E");
-   E109 : Short_Integer; pragma Import (Ada, E109, "mycommandline_E");
-   E113 : Short_Integer; pragma Import (Ada, E113, "mystring_E");
-   E115 : Short_Integer; pragma Import (Ada, E115, "mystringtokeniser_E");
-   E119 : Short_Integer; pragma Import (Ada, E119, "pin_E");
-   E123 : Short_Integer; pragma Import (Ada, E123, "stringtointeger_E");
+   E117 : Short_Integer; pragma Import (Ada, E117, "memorystore_E");
+   E119 : Short_Integer; pragma Import (Ada, E119, "mycommandline_E");
+   E123 : Short_Integer; pragma Import (Ada, E123, "mystring_E");
+   E113 : Short_Integer; pragma Import (Ada, E113, "mystringtokeniser_E");
+   E109 : Short_Integer; pragma Import (Ada, E109, "pin_E");
+   E107 : Short_Integer; pragma Import (Ada, E107, "calculatorcommands_E");
+   E125 : Short_Integer; pragma Import (Ada, E125, "stringtointeger_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -181,12 +182,13 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E054 := E054 + 1;
-      E107 := E107 + 1;
-      E109 := E109 + 1;
-      E113 := E113 + 1;
-      E115 := E115 + 1;
+      E117 := E117 + 1;
       E119 := E119 + 1;
       E123 := E123 + 1;
+      E113 := E113 + 1;
+      E109 := E109 + 1;
+      E107 := E107 + 1;
+      E125 := E125 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -227,6 +229,7 @@ package body ada_main is
    --   /Users/maoyuling/Desktop/assignment3/obj/mystring.o
    --   /Users/maoyuling/Desktop/assignment3/obj/mystringtokeniser.o
    --   /Users/maoyuling/Desktop/assignment3/obj/pin.o
+   --   /Users/maoyuling/Desktop/assignment3/obj/calculatorcommands.o
    --   /Users/maoyuling/Desktop/assignment3/obj/stringtointeger.o
    --   /Users/maoyuling/Desktop/assignment3/obj/main.o
    --   -L/Users/maoyuling/Desktop/assignment3/obj/

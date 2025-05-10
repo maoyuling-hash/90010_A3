@@ -1,0 +1,53 @@
+Summary of SPARK analysis
+=========================
+
+--------------------------------------------------------------------------------------------------------
+SPARK Analysis results        Total       Flow   Interval   CodePeer      Provers   Justified   Unproved
+--------------------------------------------------------------------------------------------------------
+Data Dependencies                 .          .          .          .            .           .          .
+Flow Dependencies                 .          .          .          .            .           .          .
+Initialization                    9          9          .          .            .           .          .
+Non-Aliasing                      .          .          .          .            .           .          .
+Run-time Checks                  56          .          .          .    56 (CVC4)           .          .
+Assertions                        8          .          .          .     8 (CVC4)           .          .
+Functional Contracts              6          .          .          .     6 (CVC4)           .          .
+LSP Verification                  .          .          .          .            .           .          .
+--------------------------------------------------------------------------------------------------------
+Total                            79    9 (11%)          .          .     70 (89%)           .          .
+
+
+max steps used for successful proof: 1
+
+Analyzed 7 units
+in unit calculatorcommands, 3 subprograms and packages out of 3 analyzed
+  CalculatorCommands at calculatorcommands.ads:6 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  CalculatorCommands.Handle_Lock at calculatorcommands.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  CalculatorCommands.Handle_Unlock at calculatorcommands.ads:8 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+in unit main, 1 subprograms and packages out of 1 analyzed
+  Main at main.adb:16 flow analyzed (0 errors, 0 checks and 3 warnings) and proved (10 checks)
+in unit memorystore, 1 subprograms and packages out of 9 analyzed
+  MemoryStore at memorystore.ads:3 skipped
+  MemoryStore.Database at memorystore.ads:13 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  MemoryStore.Get at memorystore.ads:22 skipped
+  MemoryStore.Has at memorystore.ads:20 skipped
+  MemoryStore.Init at memorystore.ads:18 skipped
+  MemoryStore.Length at memorystore.ads:31 skipped
+  MemoryStore.Print at memorystore.ads:34 skipped
+  MemoryStore.Put at memorystore.ads:25 skipped
+  MemoryStore.Remove at memorystore.ads:29 skipped
+in unit mycommandline, 0 subprograms and packages out of 4 analyzed
+  MyCommandLine at mycommandline.ads:8 skipped
+  MyCommandLine.Argument at mycommandline.ads:14 skipped
+  MyCommandLine.Argument_Count at mycommandline.ads:10 skipped
+  MyCommandLine.Command_Name at mycommandline.ads:12 skipped
+in unit mystringtokeniser, 3 subprograms and packages out of 3 analyzed
+  MyStringTokeniser at mystringtokeniser.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  MyStringTokeniser.Is_Whitespace at mystringtokeniser.ads:12 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  MyStringTokeniser.Tokenise at mystringtokeniser.ads:16 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (35 checks)
+in unit pin, 3 subprograms and packages out of 3 analyzed
+  PIN at pin.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  PIN.From_String at pin.ads:5 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (12 checks)
+  PIN.PIN at pin.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+in unit stringtointeger, 2 subprograms and packages out of 2 analyzed
+  StringToInteger at stringtointeger.ads:3 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  StringToInteger.From_String at stringtointeger.ads:6 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (13 checks)

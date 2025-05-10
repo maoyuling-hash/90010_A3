@@ -1,0 +1,107 @@
+{
+  "spark": [
+    {
+      "name": "CalculatorCommands",
+      "sloc": [
+        {
+          "file": "calculatorcommands.ads",
+          "line": 6
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "CalculatorCommands.Handle_Unlock",
+      "sloc": [
+        {
+          "file": "calculatorcommands.ads",
+          "line": 8
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "CalculatorCommands.Handle_Lock",
+      "sloc": [
+        {
+          "file": "calculatorcommands.ads",
+          "line": 13
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 508
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "CalculatorCommands.Handle_Unlock",
+          "sloc": [
+            {
+              "file": "calculatorcommands.ads",
+              "line": 8
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "Ada.Text_IO.Put_Line",
+            "sloc": [
+              {
+                "file": "a-textio.ads",
+                "line": 508
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "CalculatorCommands.Handle_Lock",
+          "sloc": [
+            {
+              "file": "calculatorcommands.ads",
+              "line": 13
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "marking": 5.01100020483136E-03,
+    "globals (basic)": 6.15500006824732E-03,
+    "globals/properties (advanced)": 8.11900012195110E-03,
+    "flow analysis": 1.55069995671511E-02,
+    "codepeer results": 9.00000031833770E-06,
+    "init_why_sections": 7.75999971665442E-04,
+    "translation of standard": 7.04400008544326E-03,
+    "translation of compilation unit": 3.93580012023449E-02,
+    "proof": 1.99999999495049E-06
+  }
+}
