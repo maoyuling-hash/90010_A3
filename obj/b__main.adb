@@ -20,12 +20,12 @@ package body ada_main is
    E076 : Short_Integer; pragma Import (Ada, E076, "ada__finalization_E");
    E075 : Short_Integer; pragma Import (Ada, E075, "system__file_io_E");
    E054 : Short_Integer; pragma Import (Ada, E054, "ada__text_io_E");
-   E125 : Short_Integer; pragma Import (Ada, E125, "memorystore_E");
-   E127 : Short_Integer; pragma Import (Ada, E127, "mycommandline_E");
+   E129 : Short_Integer; pragma Import (Ada, E129, "memorystore_E");
+   E133 : Short_Integer; pragma Import (Ada, E133, "mycommandline_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "mystring_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "mystringtokeniser_E");
    E115 : Short_Integer; pragma Import (Ada, E115, "pin_E");
-   E123 : Short_Integer; pragma Import (Ada, E123, "stringtointeger_E");
+   E131 : Short_Integer; pragma Import (Ada, E131, "stringtointeger_E");
    E107 : Short_Integer; pragma Import (Ada, E107, "calculatorcommands_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
@@ -182,12 +182,12 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E054 := E054 + 1;
-      E125 := E125 + 1;
-      E127 := E127 + 1;
+      E129 := E129 + 1;
+      E133 := E133 + 1;
       E109 := E109 + 1;
       E111 := E111 + 1;
       E115 := E115 + 1;
-      E123 := E123 + 1;
+      E131 := E131 + 1;
       E107 := E107 + 1;
    end adainit;
 

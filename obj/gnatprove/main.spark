@@ -14,6 +14,25 @@
   "flow": [
     {
       "file": "main.adb",
+      "line": 27,
+      "col": 4,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": {
+      },
+      "how_proved": "flow"
+    },
+    {
+      "file": "main.adb",
       "line": 28,
       "col": 4,
       "rule": "UNINITIALIZED",
@@ -92,7 +111,7 @@
   "proof": [
     {
       "file": "main.adb",
-      "line": 82,
+      "line": 48,
       "col": 26,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -111,7 +130,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 82,
-              "time": 0
+              "time": 1.80000000000000E-01
             }
           },
           "transformations": {
@@ -122,7 +141,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 82,
-              "time": 0
+              "time": 1.80000000000000E-01
             }
           },
           "transformations": {
@@ -133,7 +152,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 45,
-              "time": 0
+              "time": 1.60000000000000E-01
             }
           },
           "transformations": {
@@ -141,20 +160,20 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 82,
+      "check_line": 48,
       "check_col": 26,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 3,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.80000007152557E-01
         }
       }
     },
     {
       "file": "main.adb",
-      "line": 79,
+      "line": 45,
       "col": 45,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -173,7 +192,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 0
+              "time": 1.10000000000000E-01
             }
           },
           "transformations": {
@@ -181,20 +200,20 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 79,
+      "check_line": 45,
       "check_col": 45,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.09999999403954E-01
         }
       }
     },
     {
       "file": "main.adb",
-      "line": 105,
+      "line": 70,
       "col": 24,
       "rule": "VC_PRECONDITION",
       "severity": "info",
@@ -213,7 +232,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 21,
-              "time": 0
+              "time": 1.80000000000000E-01
             }
           },
           "transformations": {
@@ -224,7 +243,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 5,
-              "time": 0
+              "time": 1.20000000000000E-01
             }
           },
           "transformations": {
@@ -235,7 +254,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 21,
-              "time": 0
+              "time": 1.80000000000000E-01
             }
           },
           "transformations": {
@@ -243,20 +262,20 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 105,
+      "check_line": 70,
       "check_col": 24,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 3,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.80000007152557E-01
         }
       }
     },
     {
       "file": "main.adb",
-      "line": 123,
+      "line": 172,
       "col": 46,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
@@ -275,7 +294,7 @@
             "CVC4": {
               "result": "Valid",
               "steps": 14,
-              "time": 0
+              "time": 1.90000000000000E-01
             }
           },
           "transformations": {
@@ -283,14 +302,294 @@
         }
       ],
       "check_file": "main.adb",
-      "check_line": 123,
+      "check_line": 172,
       "check_col": 46,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 0.00000000000000E+00
+          "max_time": 1.89999997615814E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 169,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 169,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 162,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.40000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 162,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.40000000596046E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 154,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.20000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 154,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.19999997317791E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 147,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 147,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 140,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 140,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 133,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 133,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
+        }
+      }
+    },
+    {
+      "file": "main.adb",
+      "line": 126,
+      "col": 19,
+      "rule": "VC_PRECONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Main",
+        "sloc": [
+          {
+            "file": "main.adb",
+            "line": 16
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 5,
+              "time": 1.30000000000000E-01
+            }
+          },
+          "transformations": {
+          }
+        }
+      ],
+      "check_file": "main.adb",
+      "check_line": 126,
+      "check_col": 19,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
         }
       }
     }
@@ -329,7 +628,43 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 34
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Add",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 49
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Divide",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 66
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_List",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 82
               }
             ]
           }
@@ -341,7 +676,31 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 21
+                "line": 23
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Multiply",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 60
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Pop",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 44
               }
             ]
           }
@@ -353,7 +712,55 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 27
+                "line": 30
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Push2",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 37
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Remove",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 88
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_StoreTo",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 72
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Subtract",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 54
               }
             ]
           }
@@ -365,7 +772,7 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 15
+                "line": 16
               }
             ]
           }
@@ -381,7 +788,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -397,7 +804,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -413,7 +820,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -529,7 +936,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -545,7 +952,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -593,7 +1000,43 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 34
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Add",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 49
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Divide",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 66
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_List",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 82
               }
             ]
           }
@@ -605,7 +1048,31 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 21
+                "line": 23
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Multiply",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 60
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Pop",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 44
               }
             ]
           }
@@ -617,7 +1084,55 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 27
+                "line": 30
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Push2",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 37
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Remove",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 88
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_StoreTo",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 72
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Subtract",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 54
               }
             ]
           }
@@ -629,7 +1144,7 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 15
+                "line": 16
               }
             ]
           }
@@ -645,7 +1160,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -661,7 +1176,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -677,7 +1192,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -773,7 +1288,43 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 34
+                "line": 95
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Add",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 49
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Divide",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 66
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_List",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 82
               }
             ]
           }
@@ -785,7 +1336,31 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 21
+                "line": 23
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Multiply",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 60
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Pop",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 44
               }
             ]
           }
@@ -797,7 +1372,55 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 27
+                "line": 30
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Push2",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 37
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Remove",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 88
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_StoreTo",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 72
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "CalculatorCommands.Handle_Subtract",
+            "sloc": [
+              {
+                "file": "calculatorcommands.ads",
+                "line": 54
               }
             ]
           }
@@ -809,7 +1432,7 @@
             "sloc": [
               {
                 "file": "calculatorcommands.ads",
-                "line": 15
+                "line": 16
               }
             ]
           }
@@ -825,7 +1448,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -841,7 +1464,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -857,7 +1480,7 @@
               },
               {
                 "file": "calculatorcommands.ads",
-                "line": 12
+                "line": 13
               }
             ]
           }
@@ -938,14 +1561,14 @@
     }
   ],
   "timings": {
-    "marking": 8.95499996840954E-03,
-    "globals (basic)": 1.43189998343587E-02,
-    "globals/properties (advanced)": 1.38550000265241E-02,
-    "flow analysis": 3.94489988684654E-02,
+    "marking": 9.03199985623360E-03,
+    "globals (basic)": 1.38450004160404E-02,
+    "globals/properties (advanced)": 1.53419999405742E-02,
+    "flow analysis": 9.37419980764389E-02,
     "codepeer results": 9.00000031833770E-06,
-    "init_why_sections": 7.37999973352998E-04,
-    "translation of standard": 1.01990001276135E-02,
-    "translation of compilation unit": 1.01130999624729E-01,
-    "proof": 2.10732603073120E+00
+    "init_why_sections": 7.02999997884035E-04,
+    "translation of standard": 9.70499962568283E-03,
+    "translation of compilation unit": 1.77941992878914E-01,
+    "proof": 2.17541289329529E+00
   }
 }

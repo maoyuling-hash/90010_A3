@@ -33,40 +33,6 @@ procedure Main is
 
    Stack_Top : Natural := 0;
 
-   --  -- 安全获取 token 子串（带边界和溢出检查）
-   --  function Get_Token_String
-   --    (S : Lines.MyString; Tok : MyStringTokeniser.TokenExtent) return String
-   --  is
-   --     Start_Pos : constant Positive := Tok.Start;
-   --     Token_Len : constant Natural := Tok.Length;
-   --     Temp_End  : Long_Long_Integer;
-   --     End_Pos   : Natural;
-   --  begin
-   --     if Token_Len = 0 then
-   --        return "";
-   --     end if;
-
-   --     Temp_End :=
-   --       Long_Long_Integer (Start_Pos) + Long_Long_Integer (Token_Len) - 1;
-
-   --     if Temp_End > Long_Long_Integer (Lines.Length (S))
-   --       or else Temp_End > Long_Long_Integer (Natural'Last)
-   --       or else Temp_End < Long_Long_Integer (Start_Pos)
-   --     then
-   --        return "";
-   --     end if;
-
-   --     End_Pos := Natural (Temp_End);
-
-   --     return Lines.To_String (Lines.Substring (S, Start_Pos, End_Pos));
-   --  end Get_Token_String;
-
-   -- 判断字符串是否是合法 PIN
-   --  function Is_Valid_PIN_String (S : String) return Boolean is
-   --  begin
-   --     return S'Length = 4 and then (for all C of S => C in '0' .. '9');
-   --  end Is_Valid_PIN_String;
-
 begin
    -- 启动时检查是否提供主密码
    if MyCommandLine.Argument_Count < 1 then
@@ -100,30 +66,120 @@ begin
          Put_Line ("Error: Input too long.");
          return;
       end if;
-
       T := (others => (Start => 1, Length => 0));
       MyStringTokeniser.Tokenise (Lines.To_String (S), T, NumTokens);
-      if T (1).Length > 0 or NumTokens /= 0 then
+      if NumTokens /= 0 then
          declare
             Cmd : constant String := Get_Token_String (S, T (1));
          begin
             if Cmd'Length > 20 then
                Put_Line ("Command too long.");
             elsif Cmd = "unlock" then
-               CalculatorCommands.Handle_Unlock (S, T, MasterPIN, Unlocked);
+               if not Unlocked then
+                  Handle_Unlock (S, T, MasterPIN, Unlocked, Numtokens);
+               else
+                  Put_Line ("Already unlocked.");
+               end if;
 
             elsif Cmd = "lock" then
-               CalculatorCommands.Handle_Lock (S, T, MasterPIN, Unlocked);
+               if Unlocked then
+                  Handle_lock (S, T, MasterPIN, Unlocked, Numtokens);
+               else
+                  Put_Line ("Already locked.");
+               end if;
 
             elsif Cmd = "push1" then
-               CalculatorCommands.Handle_Push1
-                 (S, T, Unlocked, Stack, Stack_Top);
-            --  Put_Line
-            --    ("Top of stack is now: " & Integer'Image (Stack (Stack_Top)));
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Push1 (S, T, Stack, Stack_Top, Numtokens);
+               end if;
 
+            elsif Cmd = "push2" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Push2 (S, T, Stack, Stack_Top, NumTokens);
+               end if;
+            --  if Stack_Top = 0 then
+            --     Ada.Text_IO.Put_Line ("Stack is empty.");
+            --  else
+            --     Ada.Text_IO.Put_Line ("Current stack (bottom to top):");
+            --     for I in 1 .. Stack_Top loop
+            --        Ada.Text_IO.Put (Integer'Image (Stack (I)));
+            --        Ada.Text_IO.Put (" ");
+            --     end loop;
+            --     Ada.Text_IO.New_Line;
+            --  end if;
+
+            elsif Cmd = "pop" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Pop (Stack, Stack_Top, NumTokens);
+               end if;
+
+            elsif Cmd = "+" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Add (Stack, Stack_Top, Unlocked);
+               end if;
+
+            elsif Cmd = "-" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Subtract (Stack, Stack_Top, Unlocked);
+               end if;
+
+            elsif Cmd = "*" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Multiply (Stack, Stack_Top, Unlocked);
+               end if;
+
+            elsif Cmd = "/" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Divide (Stack, Stack_Top, Unlocked);
+               end if;
+
+            elsif Cmd = "storeTo" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_StoreTo
+                    (S, T, Stack, Stack_Top, Unlocked, NumTokens, Mem);
+               end if;
+
+            elsif Cmd = "list" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_List (Unlocked, NumTokens, Mem);
+               end if;
+
+            elsif Cmd = "remove" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_Remove (S, T, Unlocked, NumTokens, Mem);
+               end if;
+
+            elsif Cmd = "loadFrom" then
+               if not Unlocked then
+                  Put_Line ("Command not allowed: calculator is locked.");
+               else
+                  Handle_LoadFrom
+                    (S, T, Stack, Stack_Top, Unlocked, NumTokens, Mem);
+               end if;
             else
                Put_Line ("Unknown command: " & Cmd);
             end if;
+
          end;
       else
          Put_Line ("No command entered.");

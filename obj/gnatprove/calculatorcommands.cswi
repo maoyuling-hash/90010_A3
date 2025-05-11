@@ -1,7 +1,8 @@
-20250510173412
+20250511084205
 -c
 -x
 ada
 -gnatA
+-gnatef
 -gnatc
--gnates=/Users/maoyuling/Desktop/assignment3/obj/gnatprove/346567a0.tmp
+-gnates=/Users/maoyuling/Desktop/assignment3/obj/gnatprove/0ed958c6.tmp

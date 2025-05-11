@@ -13,7 +13,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U calculatorcommands%b	calculatorcommands.adb	a7a6821b OO PK
+U calculatorcommands%b	calculatorcommands.adb	0219748e OO PK
 W ada%s			ada.ads			ada.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -21,11 +21,12 @@ W mystring%s		mystring.adb		mystring.ali  ED
 W mystringtokeniser%s	mystringtokeniser.adb	mystringtokeniser.ali
 W pin%s			pin.adb			pin.ali
 
-U calculatorcommands%s	calculatorcommands.ads	cb1b1c7d OO PK
+U calculatorcommands%s	calculatorcommands.ads	e1c5f3c7 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W memorystore%s		memorystore.adb		memorystore.ali
 W mystring%s		mystring.adb		mystring.ali
 W mystringtokeniser%s	mystringtokeniser.adb	mystringtokeniser.ali
 W pin%s			pin.adb			pin.ali
@@ -40,10 +41,11 @@ D a-llitio.ads		20190518041254 9aecf52b ada.long_long_integer_text_io%s
 D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
 D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
-D calculatorcommands.ads  20250510173347 3e700c38 calculatorcommands%s
-D calculatorcommands.adb  20250510172642 ad32e274 calculatorcommands%b
+D calculatorcommands.ads  20250511083905 50ab9ee3 calculatorcommands%s
+D calculatorcommands.adb  20250511083843 6656863a calculatorcommands%b
 D interfac.ads		20190518041254 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D memorystore.ads	20250506041507 44057d61 memorystore%s
 D mystring.ads		20250506004214 ce083c8f mystring%s
 D mystring.adb		20250506005335 8198c1c4 mystring%b
 D mystringtokeniser.ads	20200512062301 9bc8f6ad mystringtokeniser%s
@@ -56,121 +58,238 @@ D s-parame.ads		20190518041256 48ec542b system.parameters%s
 D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
 G a Z
 X 1 ada.ads
-16K9*Ada 20e8 10|6r6 8r6 8r31 9r6 9r31 11|3r6 3r23 7r6
+16K9*Ada 20e8 10|6r6 9r6 9r31 10r6 10r31 11|3r6 3r23 7r6
 X 4 a-inteio.ads
-18K13*Integer_Text_IO[9|46] 10|9w10 9r35
+18K13*Integer_Text_IO[9|46] 10|10w10 10r35
 X 6 a-llitio.ads
 18K13*Long_Long_Integer_Text_IO[9|46] 10|6w10 11|7w10
 X 8 a-textio.ads
-57K13*Text_IO 727e16 10|8w10 8r35 11|3w10 3r27
+57K13*Text_IO 727e16 10|9w10 9r35 11|3w10 3r27
 481U14*Get_Line 10|100s19
-508U14*Put_Line 11|18s10 26s16 28s16 31s16 33s16 46s10 54s16 56s16 60s16
-. 76s10 78s10 80s10 86s16 94s19
+508U14*Put_Line 11|19s10 27s16 30s16 32s16 46s10 54s16 58s16 74s10 76s10
+. 82s16 90s19 108s10 110s10 116s10 127s16 139s19 159s10 161s10 163s10 168s10
+. 181s10 183s10 194s13 197s13 205s10 224s10 226s10 237s13 240s13 248s10 266s10
+. 268s10 270s10 287s16 294s16 314s10 316s10 318s10 329s13 332s13 340s10 362s10
+. 364s10 366s10 368s10 374s16 378s19 390s22 409s10 411s10 425s10 431s16 436s19
+. 443s22 464s10 466s10 468s10 474s16 478s19 485s25 494s28
 X 10 calculatorcommands.ads
-11K9*CalculatorCommands 37l5 37e23 11|9b14 129l5 129t23
-12K12*Lines[14|17] 16r22 22r22 28r22 35r11 11|12r22 40r22 67r22 103r11 117r40
-. 126r14 126r31
-13N4*Max_Stack_Size 14r38 11|79r26
-14A9*Operand_Stack(integer)<integer> 31r26 11|70r26
-15U14*Handle_Unlock 16>7 17>7 18>7 19=7 11|11b14 38l8 38t21
-16r7 S{14|18R9[12]} 11|12b7 21r59
-17a7 T{16|10A9} 11|13b7 17r10 17r30 17r49 21r62
-18i7 MasterPIN{17|3I9} 11|14b7 29r54
-19b7 Unlocked{boolean} 11|15b7 27r19 30m16
-21U14*Handle_Lock 22>7 23>7 24=7 25=7 11|39b14 64l8 64t19
-22r7 S{14|18R9[12]} 11|40b7 49r59
-23a7 T{16|10A9} 11|41b7 45r10 45r30 45r49 49r62
-24i7 MasterPIN{17|3I9} 11|42b7 58m16
-25b7 Unlocked{boolean} 11|43b7 55r23 59m16
-27U14*Handle_Push1 28>7 29>7 30>7 31=7 32=7 11|66b14 100l8 100t20
-28r7 S{14|18R9[12]} 11|67b7 83r59
-29a7 T{16|10A9} 11|68b7 77r13 77r33 77r52 83r62
-30b7 Unlocked{boolean} 11|69b7 75r14
-31a7 Stack{14A9} 11|70b7 93m19
-32i7 Stack_Top{natural} 11|71b7 79r13 92m19 92r32 93r26
-34V13*Get_Token_String{string} 35>7 35>27 11|21s41 49s41 83s41 102b13 127l8
-. 127t24
-35r7 S{14|18R9[12]} 11|103b7 117r54 126r48
-35r27 Tok{16|5R9} 11|103b27 105r40 106r39
-14i4 Max_MyString_Length{positive} 25r26[12] 36r31[12] 48r48[12] 50r33[12]
-. 31r21[12]
-18R9*MyString 16r28[12] 22r28[12] 28r28[12] 35r17[12] 20r27[12] 24r44[12]
-. 28r23[12] 28r38[12] 30r24[12] 30r39[12] 35r24[12] 38r27[12] 38r76[12] 42r21[12]
-. 45r31[12] 52e14[12] 54r24[12] 57r21[12] 20r27[12] 27r44[12] 28r11[12] 43r23[12]
-. 43r38[12] 67r24[12] 67r39[12] 86r27[12] 86r76[12] 87r11[12] 98r31[12] 11|12r28[10|12]
-. 40r28[10|12] 67r28[10|12] 103r17[10|12]
-20V13*To_String{string} 21r14[12] 22r14[12] 22r45[12] 11|126s20[10|12]
-20r23 M{14|18R9[12]} 21r47[12] 22r76[12] 21r26[12] 23r24[12] 23r30[12] 23r43[12]
-24V13*From_String{14|18R9[12]} 26r22[12]
-24a25 S{string} 25r14[12] 26r44[12] 31r10[12] 34r19[12] 35r16[12] 36r41[12]
-. 37r22[12]
-28r18 M1{14|18R9[12]} 44r22[12] 46r10[12] 48r13[12] 51r22[12] 52r41[12] 53r16[12]
-. 55r19[12]
-28r33 M2{14|18R9[12]} 46r22[12] 48r25[12] 53r28[12] 55r31[12]
-30V13*Equal{boolean} 31r18[12]
-30r19 M1{14|18R9[12]} 32r18[12] 33r33[12] 33r44[12] 68r22[12] 70r10[12] 73r22[12]
-. 74r41[12] 75r60[12] 76r16[12]
-30r34 M2{14|18R9[12]} 32r31[12] 33r56[12] 70r23[12] 75r72[12] 76r29[12]
-33i18 I{integer} 33r47[12] 33r59[12]
-35V13*Length{natural} 21s40[12] 22s69[12] 26s15[12] 32s11[12] 32s24[12] 33s26[12]
-. 36r14[12] 39s34[12] 40s14[12] 43s22[12] 11|117s46[10|12]
-35r20 M{14|18R9[12]} 55r7[12]
-38V13*Substring{14|18R9[12]} 40r21[12] 11|126s37[10|12]
-38r23 M{14|18R9[12]} 39r41[12] 92r22[12]
-38i37 From{positive} 39r13[12] 40r46[12] 87r39[12] 90r16[12] 91r41[12]
-38i54 To{positive} 39r21[12] 39r28[12] 40r41[12] 87r34[12] 90r22[12]
-42V13*Get{character} 33s40[12] 33s52[12]
-42r17 M{14|18R9[12]} 43r29[12] 58r7[12]
-42i31 Index{positive} 43r13[12] 58r13[12]
-45r23 M{14|18R9[12]} 100m43[12] 100r43[12] 100m59[12] 100r59[12]
-48A9 MyStringStr(character)<integer> 51r16[12]
-50i7*Length{integer} 55r9[12] 21r28[12] 23r45[12] 28m24[12] 34m9[12] 46r13[12]
-. 46r25[12] 48r16[12] 48r28[12] 70r13[12] 70r26[12] 87m24[12] 100m61[12]
-51a7*Str{14|48A9[12]} 58r9[12] 23r26[12] 23r32[12] 28m37[12] 29r24[12] 37m12[12]
-. 44r25[12] 51r25[12] 52r44[12] 53r19[12] 53r31[12] 55r22[12] 55r34[12] 68r25[12]
-. 73r25[12] 74r44[12] 75r63[12] 75r75[12] 76r19[12] 76r32[12] 87m49[12] 88r25[12]
-. 92m12[12] 92r24[12] 100m45[12]
-21a7 Result{string} 23m7[12] 24r14[12]
-28r7 M{14|18R9[12]} 29r22[12] 34m7[12] 37m10[12] 40r14[12]
-29i7 J{integer} 36r33[12] 37r16[12] 38m10[12] 38r15[12]
-35i11 I{integer} 36r37[12] 37r24[12]
-44i7 I{integer} 51r17[12] 52r36[12] 53r23[12] 53r35[12] 55r26[12] 55r38[12]
-. 58m16[12] 58r21[12]
-68i7 I{integer} 73r17[12] 74r36[12] 75r53[12] 76r23[12] 76r36[12] 79m16[12]
-. 79r21[12]
-75i45 J{integer} 75r67[12] 75r79[12]
-87r7 R{14|18R9[12]} 88r23[12] 92m10[12] 95r14[12]
-88i7 J{positive} 91r33[12] 92r16[12] 93m10[12] 93r15[12]
-90i11 I{integer} 91r37[12] 92r28[12]
+12K9*CalculatorCommands 108l5 108e23 11|9b14 535l5 535t23
+13K12*Lines[15|17] 17r22 24r22 31r22 38r22 73r22 89r22 97r22 106r11 11|12r22
+. 39r22 65r22 99r22 351r22 416r22 453r22 509r11 523r40 532r14 532r31
+14N4*Max_Stack_Size 15r38 11|75r26 109r25 160r25 182r25 225r25 269r25 317r25
+. 367r25 467r26
+15A9*Operand_Stack(integer)<integer> 33r26 40r26 45r26 50r26 55r26 61r26
+. 67r26 75r26 99r26 11|67r26 101r26 152r26 174r26 217r26 259r26 307r26 353r26
+. 455r26
+16U14*Handle_Unlock 17>7 18>7 19>7 20=7 21>7 11|11b14 37l8 37t21
+17r7 S{15|18R9[13]} 11|12b7 22r59
+18a7 T{17|10A9} 11|13b7 18r10 18r30 22r62
+19i7 MasterPIN{18|3I9} 11|14b7 28r54
+20b7 Unlocked{boolean} 11|15b7 29m16
+21i7 Numtokens{natural} 11|16b7 18r49
+23U14*Handle_Lock 24>7 25>7 26=7 27=7 28>7 11|38b14 62l8 62t19
+24r7 S{15|18R9[13]} 11|39b7 49r59
+25a7 T{17|10A9} 11|40b7 45r10 45r30 49r62
+26i7 MasterPIN{18|3I9} 11|41b7 56m16
+27b7 Unlocked{boolean} 11|42b7 57m16
+28i7 Numtokens{natural} 11|43b7 45r49
+30U14*Handle_Push1 31>7 32>7 33=7 34=7 35>7 11|64b14 96l8 96t20
+31r7 S{15|18R9[13]} 11|65b7 79r59
+32a7 T{17|10A9} 11|66b7 73r10 73r30 79r62
+33a7 Stack{15A9} 11|67b7 89m19
+34i7 Stack_Top{natural} 11|68b7 75r13 88m19 88r32 89r26
+35i7 Numtokens{natural} 11|69b7 73r49
+37U14*Handle_Push2 38>7 39>7 40=7 41=7 42>7 11|98b14 149l8 149t20
+38r7 S{15|18R9[13]} 11|99b7 119r60 120r60
+39a7 T{17|10A9} 11|100b7 107r33 107r53 111r13 112r17 113r17 114r17 119r63
+. 120r63
+40a7 Stack{15A9} 11|101b7 136m19 138m19
+41i7 Stack_Top{natural} 11|102b7 109r13 135m19 135r32 136r26 137m19 137r32
+. 138r26
+42i7 NumTokens{natural} 11|103b7 107r10
+44U14*Handle_Pop 45=7 46=7 47>7 11|151b14 171l8 171t18
+45a7 Stack{15A9} 11|152b7 165r24 166m10
+46i7 Stack_Top{natural} 11|153b7 158r10 160r13 165r31 166r17 167m10 167r23
+47i7 NumTokens{natural} 11|154b7 162r13
+49U14*Handle_Add 50=7 51=7 52>7 11|173b14 214l8 214t18
+50a7 Stack{15A9} 11|174b7 185r15 186m10 188r15 189m10 203m10
+51i7 Stack_Top{natural} 11|175b7 180r10 182r13 185r22 186r17 187m10 187r23
+. 188r22 189r17 190m10 190r23 202m10 202r23 203r17
+52b7 Unlocked{boolean} 53r17 11|176b7
+54U14*Handle_Subtract 55=7 56=7 57>7 11|216b14 256l8 256t23
+55a7 Stack{15A9} 11|217b7 228r15 229m10 231r15 232m10 246m10
+56i7 Stack_Top{natural} 11|218b7 223r10 225r13 228r22 229r17 230m10 230r23
+. 231r22 232r17 233m10 233r23 245m10 245r23 246r17
+57b7 Unlocked{boolean} 58r17 11|219b7
+60U14*Handle_Multiply 61=7 62=7 63>7 11|258b14 304l8 304t23
+61a7 Stack{15A9} 11|259b7 272r15 273m10 275r15 276m10 292m16
+62i7 Stack_Top{natural} 11|260b7 267r13 269r13 272r22 273r17 274m10 274r23
+. 275r22 276r17 277m10 277r23 291m16 291r29 292r23
+63b7 Unlocked{boolean} 64r17 11|261b7 265r14
+66U14*Handle_Divide 67=7 68=7 69>7 11|306b14 348l8 348t21
+67a7 Stack{15A9} 11|307b7 320r15 321m10 323r15 324m10 338m10
+68i7 Stack_Top{natural} 11|308b7 315r13 317r13 320r22 321r17 322m10 322r23
+. 323r22 324r17 325m10 325r23 337m10 337r23 338r17
+69b7 Unlocked{boolean} 70r17 11|309b7 313r14
+72U14*Handle_StoreTo 73>7 74>7 75=7 76=7 77>7 78>7 79=7 11|350b14 401l8 401t22
+73r7 S{15|18R9[13]} 11|351b7 371r65
+74a7 T{17|10A9} 11|352b7 361r33 361r53 363r13 363r37 371r68
+75a7 Stack{15A9} 11|353b7 384r43 386m22
+76i7 Stack_Top{natural} 11|354b7 365r13 367r13 384r50 386r29 387m22 387r35
+77b7 Unlocked{boolean} 80r17 11|355b7
+78i7 NumTokens{natural} 11|356b7 361r10
+79r7 Mem{14|13R9} 11|357b7 388m39
+82U14*Handle_List 83>7 84>7 85>7 11|403b14 414l8 414t19
+83b7 Unlocked{boolean} 86r17 11|404b7
+84i7 NumTokens{natural} 11|405b7 408r10
+85r7 Mem{14|13R9} 11|406b7 412r29
+88U14*Handle_Remove 89>7 90>7 91>7 92>7 93=7 11|415b14 450l8 450t21
+89r7 S{15|18R9[13]} 11|416b7 428r65
+90a7 T{17|10A9} 11|417b7 424r33 424r53 428r68
+91b7 Unlocked{boolean} 94r17 11|418b7
+92i7 NumTokens{natural} 11|419b7 424r10
+93r7 Mem{14|13R9} 11|420b7 442m42
+96U14*Handle_LoadFrom 97>7 98>7 99=7 100=7 101>7 102>7 103>7 11|452b14 506l8
+. 506t23
+97r7 S{15|18R9[13]} 11|453b7 471r65
+98a7 T{17|10A9} 11|454b7 463r33 463r53 465r13 465r37 471r68
+99a7 Stack{15A9} 11|455b7 492m28
+100i7 Stack_Top{natural} 11|456b7 467r13 491m28 491r41 492r35
+101b7 Unlocked{boolean} 104r17 11|457b7
+102i7 NumTokens{natural} 11|458b7 463r10
+103r7 Mem{14|13R9} 11|459b7 484r46 489r56
+105V13*Get_Token_String{string} 106>7 106>27 11|22s41 49s41 79s41 119s42
+. 120s42 371s47 428s47 471s47 508b13 533l8 533t24
+106r7 S{15|18R9[13]} 11|509b7 523r54 532r48
+106r27 Tok{17|5R9} 11|509b27 511r40 512r39
+14i4 Max_MyString_Length{positive} 25r26[13] 36r31[13] 48r48[13] 50r33[13]
+. 31r21[13]
+18R9*MyString 17r28[13] 24r28[13] 31r28[13] 38r28[13] 73r28[13] 89r28[13]
+. 97r28[13] 106r17[13] 20r27[13] 24r44[13] 28r23[13] 28r38[13] 30r24[13]
+. 30r39[13] 35r24[13] 38r27[13] 38r76[13] 42r21[13] 45r31[13] 52e14[13] 54r24[13]
+. 57r21[13] 20r27[13] 27r44[13] 28r11[13] 43r23[13] 43r38[13] 67r24[13] 67r39[13]
+. 86r27[13] 86r76[13] 87r11[13] 98r31[13] 11|12r28[10|13] 39r28[10|13] 65r28[10|13]
+. 99r28[10|13] 351r28[10|13] 416r28[10|13] 453r28[10|13] 509r17[10|13]
+20V13*To_String{string} 21r14[13] 22r14[13] 22r45[13] 11|532s20[10|13]
+20r23 M{15|18R9[13]} 21r47[13] 22r76[13] 21r26[13] 23r24[13] 23r30[13] 23r43[13]
+24V13*From_String{15|18R9[13]} 26r22[13]
+24a25 S{string} 25r14[13] 26r44[13] 31r10[13] 34r19[13] 35r16[13] 36r41[13]
+. 37r22[13]
+28r18 M1{15|18R9[13]} 44r22[13] 46r10[13] 48r13[13] 51r22[13] 52r41[13] 53r16[13]
+. 55r19[13]
+28r33 M2{15|18R9[13]} 46r22[13] 48r25[13] 53r28[13] 55r31[13]
+30V13*Equal{boolean} 31r18[13]
+30r19 M1{15|18R9[13]} 32r18[13] 33r33[13] 33r44[13] 68r22[13] 70r10[13] 73r22[13]
+. 74r41[13] 75r60[13] 76r16[13]
+30r34 M2{15|18R9[13]} 32r31[13] 33r56[13] 70r23[13] 75r72[13] 76r29[13]
+33i18 I{integer} 33r47[13] 33r59[13]
+35V13*Length{natural} 21s40[13] 22s69[13] 26s15[13] 32s11[13] 32s24[13] 33s26[13]
+. 36r14[13] 39s34[13] 40s14[13] 43s22[13] 11|523s46[10|13]
+35r20 M{15|18R9[13]} 55r7[13]
+38V13*Substring{15|18R9[13]} 40r21[13] 11|532s37[10|13]
+38r23 M{15|18R9[13]} 39r41[13] 92r22[13]
+38i37 From{positive} 39r13[13] 40r46[13] 87r39[13] 90r16[13] 91r41[13]
+38i54 To{positive} 39r21[13] 39r28[13] 40r41[13] 87r34[13] 90r22[13]
+42V13*Get{character} 33s40[13] 33s52[13]
+42r17 M{15|18R9[13]} 43r29[13] 58r7[13]
+42i31 Index{positive} 43r13[13] 58r13[13]
+45r23 M{15|18R9[13]} 100m43[13] 100r43[13] 100m59[13] 100r59[13]
+48A9 MyStringStr(character)<integer> 51r16[13]
+50i7*Length{integer} 55r9[13] 21r28[13] 23r45[13] 28m24[13] 34m9[13] 46r13[13]
+. 46r25[13] 48r16[13] 48r28[13] 70r13[13] 70r26[13] 87m24[13] 100m61[13]
+51a7*Str{15|48A9[13]} 58r9[13] 23r26[13] 23r32[13] 28m37[13] 29r24[13] 37m12[13]
+. 44r25[13] 51r25[13] 52r44[13] 53r19[13] 53r31[13] 55r22[13] 55r34[13] 68r25[13]
+. 73r25[13] 74r44[13] 75r63[13] 75r75[13] 76r19[13] 76r32[13] 87m49[13] 88r25[13]
+. 92m12[13] 92r24[13] 100m45[13]
+21a7 Result{string} 23m7[13] 24r14[13]
+28r7 M{15|18R9[13]} 29r22[13] 34m7[13] 37m10[13] 40r14[13]
+29i7 J{integer} 36r33[13] 37r16[13] 38m10[13] 38r15[13]
+35i11 I{integer} 36r37[13] 37r24[13]
+44i7 I{integer} 51r17[13] 52r36[13] 53r23[13] 53r35[13] 55r26[13] 55r38[13]
+. 58m16[13] 58r21[13]
+68i7 I{integer} 73r17[13] 74r36[13] 75r53[13] 76r23[13] 76r36[13] 79m16[13]
+. 79r21[13]
+75i45 J{integer} 75r67[13] 75r79[13]
+87r7 R{15|18R9[13]} 88r23[13] 92m10[13] 95r14[13]
+88i7 J{positive} 91r33[13] 92r16[13] 93m10[13] 93r15[13]
+90i11 I{integer} 91r37[13] 92r28[13]
 X 11 calculatorcommands.adb
-21a13 RawPIN{string} 23r16 24r38 29r45
-24e33 C{character} 24r48
-49a13 RawPIN{string} 51r16 52r38 58r46
+22a13 RawPIN{string} 24r16 25r38 28r45
+25e33 C{character} 25r48
+49a13 RawPIN{string} 51r16 52r38 56r46
 52e33 C{character} 52r48
-73N7 Max_Len 85r58
-83a13 RawVal{string} 85r16 85r42 90r50
-89i19 Val{integer} 93r40 95r49
-105i7 Start_Pos{positive} 115r28 119r47 126r51
-106i7 Token_Len{natural} 110r10 115r60
-107i7 Temp_End{long_long_integer} 114m7 117r10 118r17 119r17 124r27
-108i7 End_Pos{natural} 124m7 126r62
-X 14 mystring.ads
-14i4 Max_MyString_Length{positive} 10|12r35
-17k9*MyString 10|5w6 12r25 11|5w6 14|60e13
-X 16 mystringtokeniser.ads
-3K9*MyStringTokeniser 10|4w6 17r22 23r22 29r22 35r33 11|6w6 13r22 41r22 68r22
-. 103r33 16|25e22
-5R9*TokenExtent 10|35r51 11|103r51 16|8e14
-6i7*Start{positive} 11|105r44
-7i7*Length{natural} 11|17r55 45r55 77r58 106r43
-10A9*TokenArray(5R9)<integer> 10|17r40 23r40 29r40 11|13r40 41r40 68r40
-X 17 pin.ads
-1K9*PIN 10|3w6 18r22 24r26 11|4w6 14r22 29r19 29r28 42r26 58r29 17|13e8
-3I9*PIN<integer> 10|18r26 24r30 11|14r26 42r30
-5V13*From_String{3I9} 11|29s32 58s33
-X 18 stringtointeger.ads
-3K9*StringToInteger 10|7w6 11|90r21 18|8e20
-6V13*From_String{integer} 11|90s37
+71N7 Max_Len 81r58
+79a13 RawVal{string} 81r16 81r42 86r50
+85i19 Val{integer} 89r40 91r49
+105N7 Max_Len 123r40 125r40
+119a13 RawVal1{string} 122r16 123r23 131r50
+120a13 RawVal2{string} 124r23 125r23 133r50
+130i19 Val1{integer} 136r40 141r39
+132i19 Val2{integer} 138r40 143r39
+156i7 Popped_Val{integer} 165m10 169r40
+178i7 A{integer} 188m10 193r13 193r47 196r16 196r51 201r20 207r30
+178i10 B{integer} 185m10 193r28 196r31 201r24 209r30
+178i13 Result{integer} 201m10 203r31 211r30
+221i7 A{integer} 231m10 236r28 239r31 244r20 250r30
+221i10 B{integer} 228m10 236r13 236r47 239r16 239r51 244r24 252r30
+221i13 Result{integer} 244m10 246r31 254r30
+263i7 A{integer} 275m10 280r67 296r36
+263i10 B{integer} 272m10 281r67 298r36
+263i13 Result{integer} 290m16 292r37 300r36
+280i13 Wide_A{long_long_integer} 282r48
+281i13 Wide_B{long_long_integer} 282r57
+282i13 Wide_Result{long_long_integer} 284r16 285r23 290r35
+311i7 A{integer} 323m10 331r16 336r20 342r30
+311i10 B{integer} 320m10 328r13 331r43 336r24 344r30
+311i13 Result{integer} 336m10 338r31 346r30
+359i7 RawIndex_Int{integer} 376m16 377r19 377r44 382r52 394r42
+371a13 RawIndex_Str{string} 373r16 376r61
+381i22 Loc{14|8I12} 388r44
+383i22 Val{14|11I12} 388r49 392r51
+422i7 RawIndex_Int{integer} 433m16 435r19 435r44 440r52 444r62
+428a13 RawIndex_Str{string} 430r16 433r61
+439i22 Loc{14|8I12} 442r47
+461i7 RawIndex_Int{integer} 476m16 477r19 477r44 482r52 498r48
+471a13 RawIndex_Str{string} 473r16 476r61
+481i22 Loc{14|8I12} 484r51 489r61
+488i28 Val{integer} 492r49 496r48
+511i7 Start_Pos{positive} 521r28 525r47 532r51
+512i7 Token_Len{natural} 516r10 521r60
+513i7 Temp_End{long_long_integer} 520m7 523r10 524r17 525r17 530r27
+514i7 End_Pos{natural} 530m7 532r62
+X 12 interfac.ads
+52I9*Integer_32<integer>
+X 14 memorystore.ads
+3K9*MemoryStore 10|7w6 79r26 85r22 93r26 103r22 11|357r26 381r28 382r24 383r28
+. 384r24 388r22 406r22 412r10 420r26 439r28 440r24 442r22 459r22 481r28 482r24
+. 484r29 489r39 14|52e16
+8I12*Location_Index{positive} 11|381r40 382r36 439r40 440r36 481r40 482r36
+11I12*Int32{12|52I9} 11|383r40 384r36
+13R9*Database 10|79r38 85r34 93r38 103r34 11|357r38 406r34 420r38 459r34
+. 14|51e14
+20V14*Has{boolean} 11|484s41
+22V14*Get{11I12} 11|489s51
+25U14*Put 11|388s34
+29U14*Remove 11|442s34
+34U14*Print 11|412s22
+X 15 mystring.ads
+14i4 Max_MyString_Length{positive} 10|13r35
+17k9*MyString 10|5w6 13r25 11|5w6 15|60e13
+X 17 mystringtokeniser.ads
+3K9*MyStringTokeniser 10|4w6 18r22 25r22 32r22 39r22 74r22 90r22 98r22 106r33
+. 11|6w6 13r22 40r22 66r22 100r22 352r22 417r22 454r22 509r33 17|25e22
+5R9*TokenExtent 10|106r51 11|509r51 17|8e14
+6i7*Start{positive} 11|111r19 113r23 363r19 465r19 511r44
+7i7*Length{natural} 11|112r23 114r23 363r43 465r43 512r43
+10A9*TokenArray(5R9)<integer> 10|18r40 25r40 32r40 39r40 74r40 90r40 98r40
+. 11|13r40 40r40 66r40 100r40 352r40 417r40 454r40
+X 18 pin.ads
+1K9*PIN 10|3w6 19r22 26r26 11|4w6 14r22 28r19 28r28 41r26 56r29 18|13e8
+3I9*PIN<integer> 10|19r26 26r30 11|14r26 41r30
+5V13*From_String{3I9} 11|28s32 56s33
+X 19 stringtointeger.ads
+3K9*StringToInteger 10|8w6 11|86r21 131r21 133r21 376r32 433r32 476r32 19|8e20
+6V13*From_String{integer} 11|86s37 131s37 133s37 376s48 433s48 476s48
 
 QQ SPARKVERSION 2019 (20190517)
 GG EK_DIRECT_CALLS calculatorcommands__lines__to_string 1 calculatorcommands__lines__length
@@ -197,158 +316,30 @@ GG EK_DIRECT_CALLS calculatorcommands__handle_lock 3 calculatorcommands__get_tok
 GG EK_GLOBALS calculatorcommands__handle_lock local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 1 pin__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
 GG EK_DIRECT_CALLS calculatorcommands__handle_push1 3 calculatorcommands__get_token_string ada__text_io__put_line__2 stringtointeger__from_string
 GG EK_GLOBALS calculatorcommands__handle_push1 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 1 stringtointeger__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_push2 3 calculatorcommands__get_token_string ada__text_io__put_line__2 stringtointeger__from_string
+GG EK_GLOBALS calculatorcommands__handle_push2 local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 1 stringtointeger__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_pop 1 ada__text_io__put_line__2
+GG EK_GLOBALS calculatorcommands__handle_pop local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_add 1 ada__text_io__put_line__2
+GG EK_GLOBALS calculatorcommands__handle_add local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_subtract 1 ada__text_io__put_line__2
+GG EK_GLOBALS calculatorcommands__handle_subtract local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_multiply 1 ada__text_io__put_line__2
+GG EK_GLOBALS calculatorcommands__handle_multiply local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_divide 1 ada__text_io__put_line__2
+GG EK_GLOBALS calculatorcommands__handle_divide local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_storeto 4 calculatorcommands__get_token_string ada__text_io__put_line__2 memorystore__put stringtointeger__from_string
+GG EK_GLOBALS calculatorcommands__handle_storeto local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 2 memorystore__put stringtointeger__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_list 2 ada__text_io__put_line__2 memorystore__print
+GG EK_GLOBALS calculatorcommands__handle_list local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 1 memorystore__print FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_remove 4 calculatorcommands__get_token_string ada__text_io__put_line__2 memorystore__remove stringtointeger__from_string
+GG EK_GLOBALS calculatorcommands__handle_remove local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 2 memorystore__remove stringtointeger__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
+GG EK_DIRECT_CALLS calculatorcommands__handle_loadfrom 5 calculatorcommands__get_token_string ada__text_io__put_line__2 memorystore__has memorystore__get stringtointeger__from_string
+GG EK_GLOBALS calculatorcommands__handle_loadfrom local FALSE E_PROCEDURE FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 1 ada__text_io__file_system proper_output 1 ada__text_io__file_system refined_proof_in 0 refined_input 1 ada__text_io__file_system refined_output 1 ada__text_io__file_system calls_proof 0 calls 0 calls_conditional 3 memorystore__has memorystore__get stringtointeger__from_string FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 1 ada__text_io__file_system LOCKS 0
 GG EK_DIRECT_CALLS calculatorcommands__get_token_string 3 calculatorcommands__lines__to_string calculatorcommands__lines__length calculatorcommands__lines__substring
 GG EK_GLOBALS calculatorcommands__get_token_string local FALSE E_FUNCTION FALSE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 calls_proof 0 calls 0 calls_conditional 0 FALSE FALSE TRUE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
 GG EK_DIRECT_CALLS calculatorcommands 1 calculatorcommands__lines
 GG EK_GLOBALS calculatorcommands local FALSE E_PACKAGE TRUE ORIGIN_FLOW proper_proof_in 0 proper_input 0 proper_output 0 refined_proof_in 0 refined_input 0 refined_output 0 initializes 0 calls_proof 0 calls 0 calls_conditional 0 local_var 0 FALSE FALSE FALSE ENTRY_CALLS 0 SUSPENDS_ON 0 UNSYNCH_ACCESSES 0 LOCKS 0
-GG EK_FLOW_SCOPE interfaces__c_streams__set_binary_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__initialize_standard_files FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE interfaces__shift_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__unlink FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__mktemp FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__standard_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__set_text_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl TRUE FALSE FALSE FALSE FALSE system
-GG EK_FLOW_SCOPE interfaces__c_streams__fileno FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__io_exceptions TRUE FALSE FALSE FALSE FALSE ada
-GG EK_FLOW_SCOPE calculatorcommands__lines TRUE FALSE FALSE TRUE standard__mystring TRUE calculatorcommands VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__get_line__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__standard_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__open FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__pclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__handle_push1 FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fdopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__standard_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__integer_text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__new_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__reset__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__current_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__wch_con TRUE FALSE FALSE FALSE FALSE system
-GG EK_FLOW_SCOPE system__crtl__popen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__close FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fseek64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__streams__stream_element_arraySR FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__current_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada TRUE FALSE FALSE FALSE FALSE __standard
-GG EK_FLOW_SCOPE system__crtl__fflush FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__get__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__lines__to_string FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__rotate_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__skip_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get__2 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__current_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__fwrite FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__read FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__integer_text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__characters TRUE FALSE FALSE FALSE FALSE ada
-GG EK_FLOW_SCOPE calculatorcommands__get_token_string FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__realloc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__flush FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fgetc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__streams TRUE FALSE FALSE FALSE FALSE ada
-GG EK_FLOW_SCOPE ada__text_io__page_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__rotate_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__ftell FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__create FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__lines__from_string FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__afcb_allocate__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__mode FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__skip_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__characters__latin_1 TRUE FALSE FALSE FALSE FALSE ada__characters
-GG EK_FLOW_SCOPE ada__text_io__look_ahead FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__new_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__set_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fgets FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__integer_text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__lines__less FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE pin TRUE FALSE FALSE FALSE FALSE __standard
-GG EK_FLOW_SCOPE interfaces__shift_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__Olt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__write FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__rewind FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__ftell64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__streams__stream_element_arraySW FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__afcb_close__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__integer_io TRUE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__name FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__end_of_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE pin__from_string FALSE FALSE FALSE FALSE TRUE pin VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__full_name FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__afcb_free__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE system__Ole FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__flush__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__rmdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__col FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__getenv FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_right__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__stdin FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__stdout FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__read__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__look_ahead__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__streams__read FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__form FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__fread FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__put__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__stderr FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__integer_text_io TRUE FALSE FALSE TRUE ada__text_io__integer_io FALSE ada
-GG EK_FLOW_SCOPE system__Ogt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__file_typeDefault_Initial_Condition FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__rotate_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__end_of_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__chdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__new_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__isatty FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__parameters TRUE FALSE FALSE FALSE FALSE system
-GG EK_FLOW_SCOPE ada__text_io__col__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__lines__equal FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__setvbuf FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__strlen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__is_open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__end_of_file FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__streams__write FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__Oge FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__mkdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__rotate_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__fputc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__lseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__rotate_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__write__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE ada__text_io__get_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__get_immediate FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__fread__2 FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__lines__length FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE system__file_control_block__afcb_allocate FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE standard__mystring TRUE FALSE FALSE FALSE FALSE __standard
-GG EK_FLOW_SCOPE mystringtokeniser TRUE FALSE FALSE FALSE FALSE __standard
-GG EK_FLOW_SCOPE ada__text_io__skip_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE system__crtl__strncpy FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE system__wch_con__get_wc_encoding_method FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
 GG EK_FLOW_SCOPE system__Oeq FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
 GG EK_FLOW_SCOPE interfaces__shift_left__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
@@ -358,15 +349,16 @@ GG EK_FLOW_SCOPE system__parameters__default_stack_size FALSE FALSE FALSE FALSE 
 GG EK_FLOW_SCOPE interfaces__rotate_right__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
 GG EK_FLOW_SCOPE system__file_control_block__afcb_close FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
 GG EK_FLOW_SCOPE ada__streams__read_sea FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE stringtointeger TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE ada__text_io__set_output FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__setvbuf FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__fputwc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE system__wch_con__get_wc_encoding_method__2 FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__integer_text_io__get FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE system__parameters__minimum_stack_size FALSE FALSE FALSE FALSE TRUE system__parameters VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE stringtointeger__from_string FALSE FALSE FALSE FALSE TRUE stringtointeger VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__set_col FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__malloc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE system__parameters__adjust_storage_size FALSE FALSE FALSE FALSE TRUE system__parameters VISIBLE_PART
@@ -377,16 +369,17 @@ GG EK_FLOW_SCOPE interfaces__shift_right__2 FALSE FALSE FALSE FALSE TRUE interfa
 GG EK_FLOW_SCOPE system__wch_con__is_start_of_encoding FALSE FALSE FALSE FALSE TRUE system__wch_con VISIBLE_PART
 GG EK_FLOW_SCOPE interfaces__c_streams__feof FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__set_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE ada__streams__write_sea FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
 GG EK_FLOW_SCOPE ada__text_io__skip_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_push1 FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__atoi FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io TRUE FALSE FALSE TRUE ada__text_io__integer_io FALSE ada
 GG EK_FLOW_SCOPE mystringtokeniser__is_whitespace FALSE FALSE FALSE FALSE TRUE mystringtokeniser VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__fputs FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_list FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__memcpy FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__set_page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE interfaces__c_streams__ferror FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__close FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__standard_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
@@ -399,28 +392,28 @@ GG EK_FLOW_SCOPE system__crtl__clearerr FALSE FALSE FALSE FALSE TRUE system__crt
 GG EK_FLOW_SCOPE ada__text_io__get_immediate__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__get FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__standard_output FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE stringtointeger TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE calculatorcommands__lines__get FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE calculatorcommands__handle_unlock FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE ada__text_io__end_of_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io TRUE FALSE FALSE FALSE FALSE ada
 GG EK_FLOW_SCOPE system__crtl__free FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
-GG EK_FLOW_SCOPE stringtointeger__from_string FALSE FALSE FALSE FALSE TRUE stringtointeger VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE mystringtokeniser__tokenise FALSE FALSE FALSE FALSE TRUE mystringtokeniser VISIBLE_PART
 GG EK_FLOW_SCOPE interfaces__rotate_left__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__standard_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE system TRUE FALSE FALSE FALSE FALSE __standard
 GG EK_FLOW_SCOPE system__crtl__tmpfile FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__delete FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_remove FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
 GG EK_FLOW_SCOPE system__file_control_block TRUE FALSE FALSE FALSE FALSE system
 GG EK_FLOW_SCOPE system__crtl__dup FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_push2 FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__memmove FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE calculatorcommands__lines__get_line FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
-GG EK_FLOW_SCOPE interfaces__c_streams__file_exists FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__current_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
-GG EK_FLOW_SCOPE ada__long_long_integer_text_io TRUE FALSE FALSE TRUE ada__text_io__integer_io FALSE ada
+GG EK_FLOW_SCOPE interfaces__c_streams__file_exists FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__ungetc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE system__crtl__freopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
 GG EK_FLOW_SCOPE interfaces__rotate_right__2 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__set_col__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__set_page_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
@@ -432,12 +425,176 @@ GG EK_FLOW_SCOPE interfaces__c_streams__is_regular_file FALSE FALSE FALSE FALSE 
 GG EK_FLOW_SCOPE system__crtl__dup2 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__get_immediate__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__reset FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__init FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__eof_char FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
-GG EK_FLOW_SCOPE calculatorcommands__handle_lock FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
-GG EK_FLOW_SCOPE ada__text_io__current_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__integer_text_io__put FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_error FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__new_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
 GG EK_FLOW_SCOPE ada__text_io__get_line__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__set_binary_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__initialize_standard_files FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__unlink FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__mktemp FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__has FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__stream_element_arraySR FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_pop FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_loadfrom FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__set_text_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE interfaces__c_streams__fileno FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__lines TRUE FALSE FALSE TRUE standard__mystring TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE ada__io_exceptions TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get__2 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__open FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__pclose FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__get FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fdopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__standard_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_add FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__new_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__reset__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_input__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__wch_con TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE system__crtl__popen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__close FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fseek64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__page_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__put FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_output__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE system__crtl__fflush FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__stream_element_arraySW FALSE FALSE FALSE FALSE TRUE ada__streams PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__get__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__lines__to_string FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__skip_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__integer_io TRUE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__current_error__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_subtract FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fwrite FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__read FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__characters TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE calculatorcommands__get_token_string FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__realloc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fgetc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__flush FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__remove FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams TRUE FALSE FALSE FALSE FALSE ada
+GG EK_FLOW_SCOPE ada__text_io__page_length__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right__3 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__ftell FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__create FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__lines__from_string FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_allocate__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE calculatorcommands TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ada__text_io__skip_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__mode FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__look_ahead FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__characters__latin_1 TRUE FALSE FALSE FALSE FALSE ada__characters
+GG EK_FLOW_SCOPE ada__text_io__new_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__set_mode FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_multiply FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__file_typeDefault_Initial_Condition FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fgets FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__length FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__lines__less FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
+GG EK_FLOW_SCOPE pin TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE interfaces__shift_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__Olt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__write FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__rewind FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__ftell64 FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_close__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put__2 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE memorystore__print FALSE FALSE FALSE FALSE TRUE memorystore VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__name FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_page FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE pin__from_string FALSE FALSE FALSE FALSE TRUE pin VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__full_name FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__afcb_free__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE system__Ole FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__flush__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_unlock FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__rmdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__col FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__getenv FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__stdin FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_divide FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE standard__mystring TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE system__crtl__fopen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__stdout FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__read__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE ada__text_io__look_ahead__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__read FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__form FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fread FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__put__4 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__integer_text_io TRUE FALSE FALSE TRUE ada__text_io__integer_io FALSE ada
+GG EK_FLOW_SCOPE interfaces__c_streams__stderr FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE system__Ogt FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__get__3 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_page__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__chdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_line_length FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__shift_right_arithmetic__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__new_line__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__isatty FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__parameters TRUE FALSE FALSE FALSE FALSE system
+GG EK_FLOW_SCOPE calculatorcommands__lines__equal FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__col__2 FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__setvbuf FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__strlen FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__is_open FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__end_of_file FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_storeto FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE ada__streams__write FALSE FALSE FALSE FALSE TRUE ada__streams VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__Oge FALSE FALSE FALSE FALSE TRUE system VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__mkdir FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_right FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__fputc FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__lseek FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__rotate_left__4 FALSE FALSE FALSE FALSE TRUE interfaces VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__write__2 FALSE FALSE FALSE FALSE TRUE ada__text_io PRIVATE_PART
+GG EK_FLOW_SCOPE calculatorcommands__handle_lock FALSE FALSE FALSE FALSE TRUE calculatorcommands VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__get_immediate FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE ada__long_long_integer_text_io__put__3 FALSE FALSE FALSE FALSE TRUE ada__long_long_integer_text_io VISIBLE_PART
+GG EK_FLOW_SCOPE calculatorcommands__lines__length FALSE FALSE FALSE FALSE TRUE calculatorcommands__lines VISIBLE_PART
+GG EK_FLOW_SCOPE interfaces__c_streams__fread__2 FALSE FALSE FALSE FALSE TRUE interfaces__c_streams VISIBLE_PART
+GG EK_FLOW_SCOPE system__file_control_block__afcb_allocate FALSE FALSE FALSE FALSE TRUE system__file_control_block VISIBLE_PART
+GG EK_FLOW_SCOPE ada__text_io__set_input FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE mystringtokeniser TRUE FALSE FALSE FALSE FALSE __standard
+GG EK_FLOW_SCOPE ada__text_io__skip_line FALSE FALSE FALSE FALSE TRUE ada__text_io VISIBLE_PART
+GG EK_FLOW_SCOPE system__crtl__strncpy FALSE FALSE FALSE FALSE TRUE system__crtl VISIBLE_PART
 GG EK_REMOTE_STATES 1 ada__text_io__file_system
 GG EK_PREDEF_INIT_ENTITIES 1 ada__text_io__file_system
 GG EK_END_MARKER

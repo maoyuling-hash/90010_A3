@@ -7,7 +7,6 @@ A -fPIC
 P ZX
 
 RN
-RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IO
 RV NO_IMPLICIT_CONDITIONALS
 RV NO_SECONDARY_STACK
@@ -18,7 +17,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV SPARK_05
 
-U main%b		main.adb		414fc6b1 NE OO SU
+U main%b		main.adb		c7e1ab81 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
@@ -32,7 +31,6 @@ W mystringtokeniser%s	mystringtokeniser.adb	mystringtokeniser.ali
 W pin%s			pin.adb			pin.ali
 W stringtointeger%s	stringtointeger.adb	stringtointeger.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
 D ada.ads		20190518041255 76789da1 ada%s
@@ -47,10 +45,10 @@ D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
-D calculatorcommands.ads  20250510173347 3e700c38 calculatorcommands%s
+D calculatorcommands.ads  20250511083905 50ab9ee3 calculatorcommands%s
 D interfac.ads		20190518041254 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
-D main.adb		20250510173455 15a68744 main%b
+D main.adb		20250511084103 fdd378af main%b
 D memorystore.ads	20250506041507 44057d61 memorystore%s
 D mycommandline.ads	20250506003001 dbf720e9 mycommandline%s
 D mystring.ads		20250506004214 ce083c8f mystring%s
@@ -63,7 +61,6 @@ D s-conca2.ads		20190518041255 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041255 54135002 system.exception_table%s
 D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
-D s-imgint.ads		20190518041254 02dbe0c2 system.img_int%s
 D s-parame.ads		20190518041256 48ec542b system.parameters%s
 D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
 D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
@@ -80,14 +77,24 @@ G r c none [main standard 16 11 none] [argument_count mycommandline 10 13 none]
 G r c none [main standard 16 11 none] [argument mycommandline 14 13 none]
 G r c none [main standard 16 11 none] [from_string pin 5 13 none]
 G r c none [main standard 16 11 none] [init memorystore 18 14 none]
-G r c none [main standard 16 11 none] [get_line calculatorcommands__lines 45 14 12_4]
-G r c none [main standard 16 11 none] [length calculatorcommands__lines 35 13 12_4]
-G r c none [main standard 16 11 none] [to_string calculatorcommands__lines 20 13 12_4]
+G r c none [main standard 16 11 none] [get_line calculatorcommands__lines 45 14 13_4]
+G r c none [main standard 16 11 none] [length calculatorcommands__lines 35 13 13_4]
+G r c none [main standard 16 11 none] [to_string calculatorcommands__lines 20 13 13_4]
 G r c none [main standard 16 11 none] [tokenise mystringtokeniser 16 14 none]
-G r c none [main standard 16 11 none] [get_token_string calculatorcommands 34 13 none]
-G r c none [main standard 16 11 none] [handle_unlock calculatorcommands 15 14 none]
-G r c none [main standard 16 11 none] [handle_lock calculatorcommands 21 14 none]
-G r c none [main standard 16 11 none] [handle_push1 calculatorcommands 27 14 none]
+G r c none [main standard 16 11 none] [get_token_string calculatorcommands 105 13 none]
+G r c none [main standard 16 11 none] [handle_unlock calculatorcommands 16 14 none]
+G r c none [main standard 16 11 none] [handle_lock calculatorcommands 23 14 none]
+G r c none [main standard 16 11 none] [handle_push1 calculatorcommands 30 14 none]
+G r c none [main standard 16 11 none] [handle_push2 calculatorcommands 37 14 none]
+G r c none [main standard 16 11 none] [handle_pop calculatorcommands 44 14 none]
+G r c none [main standard 16 11 none] [handle_add calculatorcommands 49 14 none]
+G r c none [main standard 16 11 none] [handle_subtract calculatorcommands 54 14 none]
+G r c none [main standard 16 11 none] [handle_multiply calculatorcommands 60 14 none]
+G r c none [main standard 16 11 none] [handle_divide calculatorcommands 66 14 none]
+G r c none [main standard 16 11 none] [handle_storeto calculatorcommands 72 14 none]
+G r c none [main standard 16 11 none] [handle_list calculatorcommands 82 14 none]
+G r c none [main standard 16 11 none] [handle_remove calculatorcommands 88 14 none]
+G r c none [main standard 16 11 none] [handle_loadfrom calculatorcommands 96 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 16|10r6 10r31 11r6 11r31 12r6
 X 5 a-inteio.ads
@@ -96,53 +103,72 @@ X 7 a-llitio.ads
 18K13*Long_Long_Integer_Text_IO[11|46] 16|12w10
 X 10 a-textio.ads
 57K13*Text_IO 727e16 16|10w10 10r35
-465U14*Put 16|93s10 95s10
-508U14*Put_Line 16|73s7 84s10 100s10 111s16 121s16 125s16 129s10
+465U14*Put 16|59s10 61s10
+508U14*Put_Line 16|39s7 50s10 66s10 76s16 81s19 88s19 93s19 100s19 117s19
+. 124s19 131s19 138s19 145s19 152s19 160s19 167s19 174s19 180s16 185s10
 X 13 calculatorcommands.ads
-11K9*CalculatorCommands 37e23 16|14w6 14r30 32r12 113r16 116r16 119r16
-12K12*Lines[19|17] 16|19r8 98r7 99r10 105r35
-14A9*Operand_Stack(integer)<integer> 16|32r31
-15U14*Handle_Unlock 16|113s35
-21U14*Handle_Lock 16|116s35
-27U14*Handle_Push1 16|119s35
-34V13*Get_Token_String{string} 16|108s38
+12K9*CalculatorCommands 108e23 16|14w6 14r30 32r12
+13K12*Lines[19|17] 16|19r8 64r7 65r10 70r35
+15A9*Operand_Stack(integer)<integer> 16|32r31
+16U14*Handle_Unlock 16|79s19
+23U14*Handle_Lock 16|86s19
+30U14*Handle_Push1 16|95s19
+37U14*Handle_Push2 16|102s19
+44U14*Handle_Pop 16|119s19
+49U14*Handle_Add 16|126s19
+54U14*Handle_Subtract 16|133s19
+60U14*Handle_Multiply 16|140s19
+66U14*Handle_Divide 16|147s19
+72U14*Handle_StoreTo 16|154s19
+82U14*Handle_List 16|162s19
+88U14*Handle_Remove 16|169s19
+96U14*Handle_LoadFrom 16|176s19
+105V13*Get_Token_String{string} 16|73s38
 X 16 main.adb
-16U11*Main 16b11 132l5 132t9
-19r4 S{19|18R9[13|12]} 98m23 99r24 105r52 108r56 113r50 116r48 120r19
-22a4 T{21|10A9} 104m7 105m56 105r56 106r10 108r59 113r53 116r51 120r22
-24i4 NumTokens{natural} 105m59 106r30
-27r4 Mem{17|13R9} 90m22
-28i4 MasterPIN{22|3I9} 82m10 113r56 116m54 116r54
-29b4 Unlocked{boolean} 92r10 113m67 113r67 116m65 116r65 120r25
-32a4 Stack{13|14A9} 120m35 120r35 122r60
-34i4 Stack_Top{natural} 120m42 120r42 122r67
-79a7 Arg{string} 81r10 81r48 82r40
-81e43 C=81:48{character} 81r55
-108a13 Cmd{string} 110r16 112r19 115r19 118r19 125r48
+16U11*Main 16b11 188l5 188t9
+19r4 S{19|18R9[13|13]} 64m23 65r24 70r52 73r56 79r34 86r32 95r33 102r33 155r22
+. 169r34 177r22
+22a4 T{21|10A9} 69m7 70m56 70r56 73r59 79r37 86r35 95r36 102r36 155r25 169r37
+. 177r25
+24i4 NumTokens{natural} 70m59 71r10 79r61 86r59 95r57 102r57 119r49 155r56
+. 162r42 169r50 177r56
+27r4 Mem{17|13R9} 56m22 155m67 155r67 162r53 169m61 169r61 177r67
+28i4 MasterPIN{22|3I9} 48m10 79r40 86m38 86r38
+29b4 Unlocked{boolean} 58r10 78r23 79m51 79r51 85r19 86m49 86r49 92r23 99r23
+. 116r23 123r23 126r49 130r23 133r54 137r23 140r54 144r23 147r52 151r23 155r46
+. 159r23 162r32 166r23 169r40 173r23 177r46
+32a4 Stack{13|15A9} 95m39 95r39 102m39 102r39 119m31 119r31 126m31 126r31
+. 133m36 133r36 140m36 140r36 147m34 147r34 155m28 155r28 177m28 177r28
+34i4 Stack_Top{natural} 95m46 95r46 102m46 102r46 119m38 119r38 126m38 126r38
+. 133m43 133r43 140m43 140r43 147m41 147r41 155m35 155r35 177m35 177r35
+45a7 Arg{string} 47r10 47r48 48r40
+47e43 C=47:48{character} 47r55
+73a13 Cmd{string} 75r16 77r19 84r19 91r19 98r19 115r19 122r19 129r19 136r19
+. 143r19 150r19 158r19 165r19 172r19 180r48
 X 17 memorystore.ads
-3K9*MemoryStore 16|8w6 27r16 90r4 17|52e16
+3K9*MemoryStore 16|8w6 27r16 56r4 17|52e16
 13R9*Database 16|27r28 17|51e14
-18U14*Init 16|90s16
+18U14*Init 16|56s16
 X 18 mycommandline.ads
-8K9*MyCommandLine 16|3w6 72r7 79r32 18|17e18
-10V13*Argument_Count{natural} 16|72s21
-14V13*Argument{string} 16|79s46
+8K9*MyCommandLine 16|3w6 38r7 45r32 18|17e18
+10V13*Argument_Count{natural} 16|38s21
+14V13*Argument{string} 16|45s46
 X 19 mystring.ads
 17k9*MyString 16|4w6 19|60e13
-18R9*MyString 16|19r14[13|12]
-20V13*To_String{string} 16|105s41[13|12]
-35V13*Length{natural} 16|99s16[13|12]
-45U14*Get_Line 16|98s13[13|12]
+18R9*MyString 16|19r14[13|13]
+20V13*To_String{string} 16|70s41[13|13]
+35V13*Length{natural} 16|65s16[13|13]
+45U14*Get_Line 16|64s13[13|13]
 X 21 mystringtokeniser.ads
-3K9*MyStringTokeniser 16|5w6 22r8 105r7 21|25e22
-6i7*Start{positive} 16|104m24
-7i7*Length{natural} 16|104m36 106r16
+3K9*MyStringTokeniser 16|5w6 22r8 70r7 21|25e22
+6i7*Start{positive} 16|69m24
+7i7*Length{natural} 16|69m36
 10A9*TokenArray(5R9)<integer> 16|22r26
-16U14*Tokenise 16|105s25
+16U14*Tokenise 16|70s25
 X 22 pin.ads
-1K9*PIN 16|7w6 28r16 82r23 22|13e8
+1K9*PIN 16|7w6 28r16 48r23 22|13e8
 3I9*PIN<integer> 16|28r20
-5V13*From_String{3I9} 16|82s27
+5V13*From_String{3I9} 16|48s27
 X 23 stringtointeger.ads
 3K9*StringToInteger 16|6w6 23|8e20
 
