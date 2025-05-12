@@ -247,7 +247,7 @@ package ada_main is
    pragma Export (C, u00104, "ada__long_long_integer_text_ioB");
    u00105 : constant Version_32 := 16#4260bde7#;
    pragma Export (C, u00105, "ada__long_long_integer_text_ioS");
-   u00106 : constant Version_32 := 16#64c27e9e#;
+   u00106 : constant Version_32 := 16#112877f4#;
    pragma Export (C, u00106, "calculatorcommandsB");
    u00107 : constant Version_32 := 16#30638d7e#;
    pragma Export (C, u00107, "calculatorcommandsS");

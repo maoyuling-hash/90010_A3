@@ -187,22 +187,24 @@ package body CalculatorCommands is
          Put_Line ("Error: stack overflow.");
       else
          B := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
-         A := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
+         A := Stack (Stack_Top - 1);
 
-         -- 防止加法溢出
-         if A > 0 and then B > Integer'Last - A then
-            Put_Line ("Error: integer overflow.");
-            return;
-         elsif A < 0 and then B < Integer'First - A then
+         -- 检查加法是否会溢出
+         if (A > 0 and then B > Integer'Last - A)
+           or else (A < 0 and then B < Integer'First - A)
+         then
             Put_Line ("Error: integer overflow.");
             return;
          end if;
 
          Result := A + B;
+
+         -- 正常执行：出栈 A、B，入栈 Result
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
+
          Stack_Top := Stack_Top + 1;
          Stack (Stack_Top) := Result;
 
@@ -214,7 +216,6 @@ package body CalculatorCommands is
             & " = "
             & Integer'Image (Result));
       end if;
-
    end Handle_Add;
 
    procedure Handle_Subtract
@@ -230,22 +231,24 @@ package body CalculatorCommands is
          Put_Line ("Error: stack overflow.");
       else
          B := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
-         A := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
+         A := Stack (Stack_Top - 1);
 
-         -- 防止减法溢出
-         if B < 0 and then A > Integer'Last + B then
-            Put_Line ("Error: integer overflow.");
-            return;
-         elsif B > 0 and then A < Integer'First + B then
+         -- 检查减法是否会溢出
+         if (B < 0 and then A > Integer'Last + B)
+           or else (B > 0 and then A < Integer'First + B)
+         then
             Put_Line ("Error: integer overflow.");
             return;
          end if;
 
          Result := A - B;
+
+         -- 正常执行：出栈 A、B，入栈 Result
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
+
          Stack_Top := Stack_Top + 1;
          Stack (Stack_Top) := Result;
 
@@ -264,19 +267,16 @@ package body CalculatorCommands is
       Stack_Top : in out Natural;
       Unlocked  : in Boolean)
    is
-      A, B, Result : Integer;
+      A, B : Integer;
    begin
       if Stack_Top < 2 then
          Put_Line ("Error: not enough operands.");
       elsif Stack_Top > Max_Stack_Size then
          Put_Line ("Error: stack overflow.");
       else
+         -- 提前读取两个值，但不破坏栈结构
          B := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
-         A := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
+         A := Stack (Stack_Top - 1);
 
          declare
             Wide_A      : Long_Long_Integer := Long_Long_Integer (A);
@@ -287,19 +287,30 @@ package body CalculatorCommands is
               or else Wide_Result < Long_Long_Integer (Integer'First)
             then
                Put_Line ("Error: integer overflow.");
+               -- 溢出，保留 A 和 B，不修改栈
                return;
             else
-               Result := Integer (Wide_Result);
-               Stack_Top := Stack_Top + 1;
-               Stack (Stack_Top) := Result;
+               -- 正常执行：先弹出两个数
+               Stack (Stack_Top) := 0;
+               Stack_Top := Stack_Top - 1;
+               Stack (Stack_Top) := 0;
+               Stack_Top := Stack_Top - 1;
 
-               Put_Line
-                 ("Computed: "
-                  & Integer'Image (A)
-                  & " * "
-                  & Integer'Image (B)
-                  & " = "
-                  & Integer'Image (Result));
+               -- 计算结果并压入
+               declare
+                  Result : Integer := Integer (Wide_Result);
+               begin
+                  Stack_Top := Stack_Top + 1;
+                  Stack (Stack_Top) := Result;
+
+                  Put_Line
+                    ("Computed: "
+                     & Integer'Image (A)
+                     & " * "
+                     & Integer'Image (B)
+                     & " = "
+                     & Integer'Image (Result));
+               end;
             end if;
          end;
       end if;
@@ -317,14 +328,11 @@ package body CalculatorCommands is
       elsif Stack_Top > Max_Stack_Size then
          Put_Line ("Error: stack overflow.");
       else
+         -- 提前取出但不真正出栈
          B := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
-         A := Stack (Stack_Top);
-         Stack (Stack_Top) := 0;
-         Stack_Top := Stack_Top - 1;
+         A := Stack (Stack_Top - 1);
 
-         -- 防止除法异常（除以 0，或 Integer'First / -1）
+         -- 异常情况处理
          if B = 0 then
             Put_Line ("Error: division by zero.");
             return;
@@ -332,6 +340,12 @@ package body CalculatorCommands is
             Put_Line ("Error: integer overflow.");
             return;
          end if;
+
+         -- 正常执行：先真正出栈
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
+         Stack (Stack_Top) := 0;
+         Stack_Top := Stack_Top - 1;
 
          Result := A / B;
          Stack_Top := Stack_Top + 1;

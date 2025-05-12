@@ -9,7 +9,7 @@
 <file>
 <path name=".."/>
 <path name="calculatorcommands.mlw"/>
-<theory name="Calculatorcommands__handle_unlock__subprogram_def">
+<theory name="Calculatorcommands__handle_lock__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
@@ -35,97 +35,29 @@
   <goal name="VC def.9" expl="precondition">
   </goal>
   <goal name="VC def.10" expl="precondition" proved="true">
-  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
-  <proof prover="1" obsolete="true"><result status="unknown" steps="59453"/></proof>
-  <proof prover="2"><result status="valid" steps="42"/></proof>
-  <proof prover="3" steplimit="0" memlimit="2000" obsolete="true"><result status="unknown" steps="241"/></proof>
+  <proof prover="2"><result status="valid" steps="44"/></proof>
   </goal>
   <goal name="VC def.11" expl="precondition" proved="true">
-  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
-  <proof prover="1" obsolete="true"><result status="unknown" steps="60150"/></proof>
-  <proof prover="2"><result status="valid" steps="76"/></proof>
-  <proof prover="3" steplimit="0" memlimit="2000" obsolete="true"><result status="unknown" steps="218"/></proof>
+  <proof prover="2"><result status="valid" steps="80"/></proof>
   </goal>
   <goal name="VC def.12" expl="precondition" proved="true">
-  <proof prover="1" obsolete="true"><result status="valid" steps="37486"/></proof>
-  <proof prover="2"><result status="valid" steps="76"/></proof>
+  <proof prover="1" obsolete="true"><result status="valid" steps="33926"/></proof>
+  <proof prover="2"><result status="valid" steps="80"/></proof>
   </goal>
   <goal name="VC def.13" expl="precondition">
   </goal>
-  <goal name="VC def.14" expl="precondition">
+  <goal name="VC def.14" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" steps="62"/></proof>
   </goal>
-  <goal name="VC def.15" expl="postcondition">
+  <goal name="VC def.15" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" steps="107"/></proof>
   </goal>
-  <goal name="VC def.9" expl="precondition">
-  </goal>
-  <goal name="VC def.2" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000" obsolete="true"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.1" expl="assertion">
-  <proof prover="0"><result status="unknown"/></proof>
-  <proof prover="1"><result status="unknown" steps="58194"/></proof>
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="unknown" steps="193"/></proof>
-  <proof prover="3" steplimit="0" memlimit="2000"><result status="unknown" steps="198"/></proof>
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Calculatorcommands__handle_push1__subprogram_def">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="postcondition">
-  </goal>
-  <goal name="VC def.1" expl="postcondition">
-  </goal>
-  <goal name="VC def.2" expl="postcondition">
-  </goal>
-  <goal name="VC def.3" expl="precondition">
-  </goal>
-  <goal name="VC def.4" expl="precondition">
-  </goal>
-  <goal name="VC def.5" expl="assertion">
-  <proof prover="2"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.6" expl="assertion">
-  <proof prover="2"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.7" expl="precondition">
-  </goal>
-  <goal name="VC def.8" expl="postcondition">
-  </goal>
-  <goal name="VC def.9" expl="postcondition">
-  </goal>
-  <goal name="VC def.10" expl="precondition">
-  </goal>
-  <goal name="VC def.11" expl="precondition">
-  </goal>
-  <goal name="VC def.12" expl="precondition">
-  <proof prover="2"><result status="valid" steps="15"/></proof>
-  </goal>
-  <goal name="VC def.13" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.14" expl="assertion">
-  <proof prover="1" obsolete="true"><result status="valid" steps="41106"/></proof>
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.15" expl="precondition">
-  <proof prover="2"><result status="valid" steps="120"/></proof>
-  </goal>
-  <goal name="VC def.16" expl="precondition">
-  <proof prover="2"><result status="valid" steps="178"/></proof>
+  <goal name="VC def.16" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" steps="107"/></proof>
   </goal>
   <goal name="VC def.17" expl="precondition">
   </goal>
   <goal name="VC def.18" expl="postcondition">
-  </goal>
-  <goal name="VC def.11" expl="precondition">
-  </goal>
-  <goal name="VC def.7" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.6" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
   </goal>
  </transf>
  </goal>
@@ -218,15 +150,7 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__lines__mystring__default_checks">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="postcondition">
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Calculatorcommands__lines__less__subprogram_def">
+<theory name="Calculatorcommands__handle_push1__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
@@ -235,42 +159,61 @@
   </goal>
   <goal name="VC def.2" expl="postcondition">
   </goal>
-  <goal name="VC def.3" expl="loop invariant init">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.3" expl="precondition">
   </goal>
-  <goal name="VC def.4" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.4" expl="precondition">
   </goal>
   <goal name="VC def.5" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <proof prover="2"><result status="valid" steps="14"/></proof>
   </goal>
   <goal name="VC def.6" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <proof prover="2"><result status="valid" steps="14"/></proof>
   </goal>
-  <goal name="VC def.7" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.7" expl="precondition">
   </goal>
-  <goal name="VC def.8" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.8" expl="postcondition">
   </goal>
-  <goal name="VC def.9" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.9" expl="postcondition">
   </goal>
-  <goal name="VC def.10" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.10" expl="precondition">
   </goal>
-  <goal name="VC def.11" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.11" expl="precondition">
   </goal>
   <goal name="VC def.12" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="17"/></proof>
+  <proof prover="2"><result status="valid" steps="15"/></proof>
   </goal>
-  <goal name="VC def.13" expl="postcondition">
+  <goal name="VC def.13" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="VC def.14" expl="loop invariant preservation">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="20"/></proof>
+  <goal name="VC def.14" expl="assertion">
+  <proof prover="1" obsolete="true"><result status="valid" steps="41106"/></proof>
+  <proof prover="2"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="VC def.15" expl="postcondition">
+  <goal name="VC def.15" expl="precondition">
+  <proof prover="2"><result status="valid" steps="120"/></proof>
+  </goal>
+  <goal name="VC def.16" expl="precondition">
+  <proof prover="2"><result status="valid" steps="178"/></proof>
+  </goal>
+  <goal name="VC def.17" expl="precondition">
+  </goal>
+  <goal name="VC def.18" expl="postcondition">
+  </goal>
+  <goal name="VC def.11" expl="precondition">
+  </goal>
+  <goal name="VC def.7" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.6" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Calculatorcommands__lines__mystring__default_checks">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="postcondition">
   </goal>
  </transf>
  </goal>
@@ -343,6 +286,134 @@
   <goal name="VC def.22" expl="precondition">
   </goal>
   <goal name="VC def.23" expl="postcondition">
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Calculatorcommands__lines__less__subprogram_def">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="postcondition">
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="postcondition">
+  </goal>
+  <goal name="VC def.3" expl="loop invariant init">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.4" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.5" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.6" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.7" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.8" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.9" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.10" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.11" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.12" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="17"/></proof>
+  </goal>
+  <goal name="VC def.13" expl="postcondition">
+  </goal>
+  <goal name="VC def.14" expl="loop invariant preservation">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="20"/></proof>
+  </goal>
+  <goal name="VC def.15" expl="postcondition">
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Calculatorcommands__handle_unlock__subprogram_def">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="postcondition">
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="postcondition">
+  </goal>
+  <goal name="VC def.3" expl="precondition">
+  </goal>
+  <goal name="VC def.4" expl="assertion">
+  <proof prover="2"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.5" expl="assertion">
+  <proof prover="2"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.6" expl="precondition">
+  </goal>
+  <goal name="VC def.7" expl="postcondition">
+  </goal>
+  <goal name="VC def.8" expl="postcondition">
+  </goal>
+  <goal name="VC def.9" expl="precondition">
+  </goal>
+  <goal name="VC def.10" expl="precondition">
+  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="59453"/></proof>
+  <proof prover="2"><result status="valid" steps="42"/></proof>
+  <proof prover="3" steplimit="0" memlimit="2000" obsolete="true"><result status="unknown" steps="241"/></proof>
+  </goal>
+  <goal name="VC def.11" expl="precondition">
+  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="60150"/></proof>
+  <proof prover="2"><result status="valid" steps="76"/></proof>
+  <proof prover="3" steplimit="0" memlimit="2000" obsolete="true"><result status="unknown" steps="218"/></proof>
+  </goal>
+  <goal name="VC def.12" expl="precondition">
+  <proof prover="1" obsolete="true"><result status="valid" steps="37486"/></proof>
+  <proof prover="2"><result status="valid" steps="76"/></proof>
+  </goal>
+  <goal name="VC def.13" expl="precondition">
+  </goal>
+  <goal name="VC def.14" expl="precondition">
+  </goal>
+  <goal name="VC def.15" expl="postcondition">
+  </goal>
+  <goal name="VC def.9" expl="precondition">
+  </goal>
+  <goal name="VC def.2" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000" obsolete="true"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.1" expl="assertion">
+  <proof prover="0"><result status="unknown"/></proof>
+  <proof prover="1"><result status="unknown" steps="58194"/></proof>
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="unknown" steps="193"/></proof>
+  <proof prover="3" steplimit="0" memlimit="2000"><result status="unknown" steps="198"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Calculatorcommands__lines__get__subprogram_def">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="precondition">
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.3" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="29"/></proof>
+  </goal>
+  <goal name="VC def.4" expl="postcondition">
   </goal>
  </transf>
  </goal>
@@ -462,24 +533,6 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__lines__get__subprogram_def">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="precondition">
-  </goal>
-  <goal name="VC def.1" expl="postcondition">
-  </goal>
-  <goal name="VC def.2" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.3" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="29"/></proof>
-  </goal>
-  <goal name="VC def.4" expl="postcondition">
-  </goal>
- </transf>
- </goal>
-</theory>
 <theory name="Calculatorcommands__handle_multiply__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
@@ -569,130 +622,39 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__handle_pop__subprogram_def">
+<theory name="Calculatorcommands__trim_trailing_spaces__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
   </goal>
-  <goal name="VC def.1" expl="precondition">
+  <goal name="VC def.1" expl="postcondition">
   </goal>
   <goal name="VC def.2" expl="precondition">
-  </goal>
-  <goal name="VC def.3" expl="precondition">
-  </goal>
-  <goal name="VC def.4" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.5" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  <proof prover="3" obsolete="true"><result status="unknown" steps="33"/></proof>
-  </goal>
-  <goal name="VC def.6" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.7" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.8" expl="precondition">
-  <proof prover="2"><result status="valid" steps="19"/></proof>
-  </goal>
-  <goal name="VC def.9" expl="precondition">
-  <proof prover="2"><result status="valid" steps="93"/></proof>
-  </goal>
-  <goal name="VC def.10" expl="precondition">
-  <proof prover="2"><result status="valid" steps="128"/></proof>
-  </goal>
-  <goal name="VC def.11" expl="precondition">
-  </goal>
-  <goal name="VC def.12" expl="postcondition">
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Calculatorcommands__lines__from_string__subprogram_def">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="postcondition">
-  </goal>
-  <goal name="VC def.1" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
-  </goal>
-  <goal name="VC def.2" expl="postcondition">
+  <proof prover="2"><result status="valid" steps="13"/></proof>
   </goal>
   <goal name="VC def.3" expl="postcondition">
   </goal>
-  <goal name="VC def.4" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  <goal name="VC def.4" expl="postcondition">
   </goal>
-  <goal name="VC def.5" expl="unreachable point">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.5" expl="postcondition">
   </goal>
   <goal name="VC def.6" expl="postcondition">
   </goal>
   <goal name="VC def.7" expl="postcondition">
   </goal>
-  <goal name="VC def.8" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  <goal name="VC def.8" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="VC def.9" expl="postcondition">
+  <goal name="VC def.9" expl="assertion">
+  <proof prover="2"><result status="valid" steps="20"/></proof>
   </goal>
-  <goal name="VC def.10" expl="postcondition">
+  <goal name="VC def.10" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
   </goal>
-  <goal name="VC def.11" expl="postcondition">
+  <goal name="VC def.11" expl="assertion">
+  <proof prover="2"><result status="valid" steps="28"/></proof>
   </goal>
   <goal name="VC def.12" expl="postcondition">
-  </goal>
-  <goal name="VC def.13" expl="postcondition">
-  </goal>
-  <goal name="VC def.14" expl="postcondition">
-  </goal>
-  <goal name="VC def.15" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.16" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.17" expl="postcondition">
-  </goal>
-  <goal name="VC def.18" expl="loop invariant init">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.19" expl="postcondition">
-  </goal>
-  <goal name="VC def.20" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.21" expl="assertion">
-  <proof prover="1"><result status="valid" steps="12361"/></proof>
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="failure"/></proof>
-  </goal>
-  <goal name="VC def.22" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
-  </goal>
-  <goal name="VC def.23" expl="postcondition">
-  </goal>
-  <goal name="VC def.24" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.25" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.26" expl="postcondition">
-  </goal>
-  <goal name="VC def.27" expl="loop invariant preservation">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.28" expl="postcondition">
-  </goal>
-  <goal name="VC def.29" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.30" expl="precondition">
-  </goal>
-  <goal name="VC def.31" expl="postcondition">
-  </goal>
-  <goal name="VC def.32" expl="postcondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="146"/></proof>
   </goal>
  </transf>
  </goal>
@@ -797,52 +759,130 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__trim_trailing_spaces__subprogram_def">
+<theory name="Calculatorcommands__lines__from_string__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
   </goal>
-  <goal name="VC def.1" expl="postcondition">
+  <goal name="VC def.1" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
   </goal>
-  <goal name="VC def.2" expl="precondition">
-  <proof prover="2"><result status="valid" steps="13"/></proof>
+  <goal name="VC def.2" expl="postcondition">
   </goal>
   <goal name="VC def.3" expl="postcondition">
   </goal>
-  <goal name="VC def.4" expl="postcondition">
+  <goal name="VC def.4" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
   </goal>
-  <goal name="VC def.5" expl="postcondition">
+  <goal name="VC def.5" expl="unreachable point">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
   </goal>
   <goal name="VC def.6" expl="postcondition">
   </goal>
   <goal name="VC def.7" expl="postcondition">
   </goal>
-  <goal name="VC def.8" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.8" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
   </goal>
-  <goal name="VC def.9" expl="assertion">
-  <proof prover="2"><result status="valid" steps="20"/></proof>
+  <goal name="VC def.9" expl="postcondition">
   </goal>
-  <goal name="VC def.10" expl="assertion">
-  <proof prover="2"><result status="valid" steps="5"/></proof>
+  <goal name="VC def.10" expl="postcondition">
   </goal>
-  <goal name="VC def.11" expl="assertion">
-  <proof prover="2"><result status="valid" steps="28"/></proof>
+  <goal name="VC def.11" expl="postcondition">
   </goal>
   <goal name="VC def.12" expl="postcondition">
+  </goal>
+  <goal name="VC def.13" expl="postcondition">
+  </goal>
+  <goal name="VC def.14" expl="postcondition">
+  </goal>
+  <goal name="VC def.15" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.16" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.17" expl="postcondition">
+  </goal>
+  <goal name="VC def.18" expl="loop invariant init">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.19" expl="postcondition">
+  </goal>
+  <goal name="VC def.20" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.21" expl="assertion">
+  <proof prover="1"><result status="valid" steps="12361"/></proof>
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="failure"/></proof>
+  </goal>
+  <goal name="VC def.22" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
+  </goal>
+  <goal name="VC def.23" expl="postcondition">
+  </goal>
+  <goal name="VC def.24" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.25" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.26" expl="postcondition">
+  </goal>
+  <goal name="VC def.27" expl="loop invariant preservation">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.28" expl="postcondition">
+  </goal>
+  <goal name="VC def.29" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.30" expl="precondition">
+  </goal>
+  <goal name="VC def.31" expl="postcondition">
+  </goal>
+  <goal name="VC def.32" expl="postcondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="146"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__lines__length__subprogram_def">
+<theory name="Calculatorcommands__handle_pop__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
   <goal name="VC def.0" expl="postcondition">
   </goal>
-  <goal name="VC def.1" expl="postcondition">
+  <goal name="VC def.1" expl="precondition">
   </goal>
-  <goal name="VC def.2" expl="postcondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="35"/></proof>
+  <goal name="VC def.2" expl="precondition">
+  </goal>
+  <goal name="VC def.3" expl="precondition">
+  </goal>
+  <goal name="VC def.4" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.5" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
+  <proof prover="3" obsolete="true"><result status="unknown" steps="33"/></proof>
+  </goal>
+  <goal name="VC def.6" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.7" expl="assertion">
+  <proof prover="2"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.8" expl="precondition">
+  <proof prover="2"><result status="valid" steps="19"/></proof>
+  </goal>
+  <goal name="VC def.9" expl="precondition">
+  <proof prover="2"><result status="valid" steps="93"/></proof>
+  </goal>
+  <goal name="VC def.10" expl="precondition">
+  <proof prover="2"><result status="valid" steps="128"/></proof>
+  </goal>
+  <goal name="VC def.11" expl="precondition">
+  </goal>
+  <goal name="VC def.12" expl="postcondition">
   </goal>
  </transf>
  </goal>
@@ -926,74 +966,15 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__lines__substring__subprogram_def">
+<theory name="Calculatorcommands__lines__length__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="precondition">
+  <goal name="VC def.0" expl="postcondition">
   </goal>
   <goal name="VC def.1" expl="postcondition">
   </goal>
-  <goal name="VC def.2" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.3" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="29"/></proof>
-  </goal>
-  <goal name="VC def.4" expl="postcondition">
-  </goal>
-  <goal name="VC def.5" expl="postcondition">
-  </goal>
-  <goal name="VC def.6" expl="postcondition">
-  </goal>
-  <goal name="VC def.7" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.8" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.9" expl="postcondition">
-  </goal>
-  <goal name="VC def.10" expl="loop invariant init">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.11" expl="postcondition">
-  </goal>
-  <goal name="VC def.12" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="20"/></proof>
-  </goal>
-  <goal name="VC def.13" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="69"/></proof>
-  </goal>
-  <goal name="VC def.14" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.15" expl="assertion">
-  <proof prover="1"><result status="valid" steps="10139"/></proof>
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="failure"/></proof>
-  </goal>
-  <goal name="VC def.16" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
-  </goal>
-  <goal name="VC def.17" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="21"/></proof>
-  </goal>
-  <goal name="VC def.18" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.19" expl="postcondition">
-  </goal>
-  <goal name="VC def.20" expl="loop invariant preservation">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.21" expl="precondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
-  </goal>
-  <goal name="VC def.22" expl="precondition">
-  </goal>
-  <goal name="VC def.23" expl="postcondition">
-  </goal>
-  <goal name="VC def.24" expl="postcondition">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="102"/></proof>
+  <goal name="VC def.2" expl="postcondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="35"/></proof>
   </goal>
  </transf>
  </goal>
@@ -1076,6 +1057,78 @@
  </transf>
  </goal>
 </theory>
+<theory name="Calculatorcommands__lines__substring__subprogram_def">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="precondition">
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.3" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="29"/></proof>
+  </goal>
+  <goal name="VC def.4" expl="postcondition">
+  </goal>
+  <goal name="VC def.5" expl="postcondition">
+  </goal>
+  <goal name="VC def.6" expl="postcondition">
+  </goal>
+  <goal name="VC def.7" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.8" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.9" expl="postcondition">
+  </goal>
+  <goal name="VC def.10" expl="loop invariant init">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.11" expl="postcondition">
+  </goal>
+  <goal name="VC def.12" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="20"/></proof>
+  </goal>
+  <goal name="VC def.13" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="69"/></proof>
+  </goal>
+  <goal name="VC def.14" expl="assertion">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.15" expl="assertion">
+  <proof prover="1"><result status="valid" steps="10139"/></proof>
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="failure"/></proof>
+  </goal>
+  <goal name="VC def.16" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="16"/></proof>
+  </goal>
+  <goal name="VC def.17" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="21"/></proof>
+  </goal>
+  <goal name="VC def.18" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
+  </goal>
+  <goal name="VC def.19" expl="postcondition">
+  </goal>
+  <goal name="VC def.20" expl="loop invariant preservation">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.21" expl="precondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="5"/></proof>
+  </goal>
+  <goal name="VC def.22" expl="precondition">
+  </goal>
+  <goal name="VC def.23" expl="postcondition">
+  </goal>
+  <goal name="VC def.24" expl="postcondition">
+  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="102"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
 <theory name="Calculatorcommands__lines__package_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
@@ -1151,6 +1204,20 @@
   <goal name="VC def.22" expl="precondition">
   </goal>
   <goal name="VC def.23" expl="postcondition">
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Calculatorcommands__is_valid_pin_string__subprogram_def">
+ <goal name="VC def" expl="VC for def">
+ <transf name="split_goal_wp_conj" >
+  <goal name="VC def.0" expl="postcondition">
+  </goal>
+  <goal name="VC def.1" expl="postcondition">
+  </goal>
+  <goal name="VC def.2" expl="postcondition">
+  </goal>
+  <goal name="VC def.3" expl="postcondition">
   </goal>
  </transf>
  </goal>
@@ -1237,20 +1304,6 @@
  </transf>
  </goal>
 </theory>
-<theory name="Calculatorcommands__is_valid_pin_string__subprogram_def">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="postcondition">
-  </goal>
-  <goal name="VC def.1" expl="postcondition">
-  </goal>
-  <goal name="VC def.2" expl="postcondition">
-  </goal>
-  <goal name="VC def.3" expl="postcondition">
-  </goal>
- </transf>
- </goal>
-</theory>
 <theory name="Calculatorcommands__get_token_string__subprogram_def">
  <goal name="VC def" expl="VC for def">
  <transf name="split_goal_wp_conj" >
@@ -1273,56 +1326,6 @@
   <goal name="VC def.6" expl="precondition">
   </goal>
   <goal name="VC def.7" expl="postcondition">
-  </goal>
- </transf>
- </goal>
-</theory>
-<theory name="Calculatorcommands__handle_lock__subprogram_def">
- <goal name="VC def" expl="VC for def">
- <transf name="split_goal_wp_conj" >
-  <goal name="VC def.0" expl="postcondition">
-  </goal>
-  <goal name="VC def.1" expl="postcondition">
-  </goal>
-  <goal name="VC def.2" expl="postcondition">
-  </goal>
-  <goal name="VC def.3" expl="precondition">
-  </goal>
-  <goal name="VC def.4" expl="assertion">
-  <proof prover="2"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.5" expl="assertion">
-  <proof prover="2"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.6" expl="precondition">
-  </goal>
-  <goal name="VC def.7" expl="postcondition">
-  </goal>
-  <goal name="VC def.8" expl="postcondition">
-  </goal>
-  <goal name="VC def.9" expl="precondition">
-  </goal>
-  <goal name="VC def.10" expl="precondition">
-  <proof prover="2"><result status="valid" steps="44"/></proof>
-  </goal>
-  <goal name="VC def.11" expl="precondition">
-  <proof prover="2"><result status="valid" steps="80"/></proof>
-  </goal>
-  <goal name="VC def.12" expl="precondition">
-  <proof prover="1" obsolete="true"><result status="valid" steps="33926"/></proof>
-  <proof prover="2"><result status="valid" steps="80"/></proof>
-  </goal>
-  <goal name="VC def.13" expl="precondition">
-  </goal>
-  <goal name="VC def.14" expl="postcondition">
-  </goal>
-  <goal name="VC def.10" expl="precondition">
-  </goal>
-  <goal name="VC def.5" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
-  </goal>
-  <goal name="VC def.4" expl="assertion">
-  <proof prover="2" timelimit="60" steplimit="0" memlimit="2000"><result status="valid" steps="14"/></proof>
   </goal>
  </transf>
  </goal>
