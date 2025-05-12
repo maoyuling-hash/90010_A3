@@ -105,4 +105,6 @@ package CalculatorCommands is
    function Get_Token_String
      (S : Lines.MyString; Tok : MyStringTokeniser.TokenExtent) return String;
 
+   function Trim_Trailing_Spaces (Input : in String) return String;
+
 end CalculatorCommands;

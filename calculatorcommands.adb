@@ -53,9 +53,13 @@ package body CalculatorCommands is
             then
                Put_Line ("Invalid PIN: must be a 4-digit numeric string.");
             else
-               MasterPIN := PIN.From_String (RawPIN);
-               Unlocked := False;
-               Put_Line ("Locked with new PIN.");
+               if PIN."=" (PIN.From_String (RawPIN), MasterPIN) then
+                  Put_Line ("Invalid PIN: must be different to old PIN.");
+               else
+                  MasterPIN := PIN.From_String (RawPIN);
+                  Unlocked := False;
+                  Put_Line ("Locked with new PIN.");
+               end if;
             end if;
          end;
       end if;
@@ -262,9 +266,7 @@ package body CalculatorCommands is
    is
       A, B, Result : Integer;
    begin
-      if not Unlocked then
-         Put_Line ("Command not allowed: calculator is locked.");
-      elsif Stack_Top < 2 then
+      if Stack_Top < 2 then
          Put_Line ("Error: not enough operands.");
       elsif Stack_Top > Max_Stack_Size then
          Put_Line ("Error: stack overflow.");
@@ -310,9 +312,7 @@ package body CalculatorCommands is
    is
       A, B, Result : Integer;
    begin
-      if not Unlocked then
-         Put_Line ("Command not allowed: calculator is locked.");
-      elsif Stack_Top < 2 then
+      if Stack_Top < 2 then
          Put_Line ("Error: not enough operands.");
       elsif Stack_Top > Max_Stack_Size then
          Put_Line ("Error: stack overflow.");
@@ -531,5 +531,23 @@ package body CalculatorCommands is
 
       return Lines.To_String (Lines.Substring (S, Start_Pos, End_Pos));
    end Get_Token_String;
+
+   function Trim_Trailing_Spaces (Input : in String) return String is
+      Last_Non_Space : Integer := Input'First - 1;
+   begin
+      for I in reverse Input'Range loop
+         if Input (I) /= ' ' then
+            Last_Non_Space := I;
+            exit;
+         end if;
+      end loop;
+
+      if Last_Non_Space < Input'First then
+         return "";  -- Entire string is spaces
+
+      else
+         return Input (Input'First .. Last_Non_Space);
+      end if;
+   end Trim_Trailing_Spaces;
 
 end CalculatorCommands;

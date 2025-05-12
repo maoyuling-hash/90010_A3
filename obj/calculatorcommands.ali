@@ -15,7 +15,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U calculatorcommands%b	calculatorcommands.adb	0219748e NE OO PK
+U calculatorcommands%b	calculatorcommands.adb	64c27e9e NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -32,7 +32,7 @@ Z system.concat_6%s	s-conca6.adb		s-conca6.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U calculatorcommands%s	calculatorcommands.ads	e1c5f3c7 EE NE OO PK
+U calculatorcommands%s	calculatorcommands.ads	30638d7e EE NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
@@ -58,8 +58,8 @@ D a-tags.ads		20190518041256 491b781d ada.tags%s
 D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
-D calculatorcommands.ads  20250511083905 50ab9ee3 calculatorcommands%s
-D calculatorcommands.adb  20250511083843 6656863a calculatorcommands%b
+D calculatorcommands.ads  20250512062645 810de05a calculatorcommands%s
+D calculatorcommands.adb  20250512063154 d12bf293 calculatorcommands%b
 D interfac.ads		20190518041254 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
 D memorystore.ads	20250506041507 44057d61 memorystore%s
@@ -113,6 +113,7 @@ G c Z s b [handle_list calculatorcommands 82 14 none]
 G c Z s b [handle_remove calculatorcommands 88 14 none]
 G c Z s b [handle_loadfrom calculatorcommands 96 14 none]
 G c Z s b [get_token_string calculatorcommands 105 13 none]
+G c Z s b [trim_trailing_spaces calculatorcommands 108 13 none]
 G c Z s s [Toperand_stackBIP calculatorcommands 15 4 none]
 G r i none [s calculatorcommands 12 1 none] [mystring standard 17 9 none]
 G r c none [handle_unlock calculatorcommands 16 14 none] [from_string pin 5 13 none]
@@ -135,20 +136,20 @@ X 7 a-llitio.ads
 18K13*Long_Long_Integer_Text_IO[11|46] 13|6w10 14|7w10
 X 10 a-textio.ads
 57K13*Text_IO 727e16 13|9w10 9r35 14|3w10 3r27
-508U14*Put_Line 14|19s10 27s16 30s16 32s16 46s10 54s16 58s16 74s10 76s10
-. 82s16 90s19 108s10 110s10 116s10 127s16 139s19 159s10 161s10 163s10 168s10
-. 181s10 183s10 194s13 197s13 205s10 224s10 226s10 237s13 240s13 248s10 266s10
-. 268s10 270s10 287s16 294s16 314s10 316s10 318s10 329s13 332s13 340s10 362s10
-. 364s10 366s10 368s10 374s16 378s19 390s22 409s10 411s10 425s10 431s16 436s19
-. 443s22 464s10 466s10 468s10 474s16 478s19 485s25 494s28
+508U14*Put_Line 14|19s10 27s16 30s16 32s16 46s10 54s16 57s19 61s19 78s10
+. 80s10 86s16 94s19 112s10 114s10 120s10 131s16 143s19 163s10 165s10 167s10
+. 172s10 185s10 187s10 198s13 201s13 209s10 228s10 230s10 241s13 244s13 252s10
+. 270s10 272s10 289s16 296s16 316s10 318s10 329s13 332s13 340s10 362s10 364s10
+. 366s10 368s10 374s16 378s19 390s22 409s10 411s10 425s10 431s16 436s19 443s22
+. 464s10 466s10 468s10 474s16 478s19 485s25 494s28
 X 13 calculatorcommands.ads
-12K9*CalculatorCommands 108l5 108e23 14|9b14 535l5 535t23
+12K9*CalculatorCommands 110l5 110e23 14|9b14 553l5 553t23
 13K12*Lines[18|17] 17r22 24r22 31r22 38r22 73r22 89r22 97r22 106r11 14|12r22
-. 39r22 65r22 99r22 351r22 416r22 453r22 509r11 523r40 532r14 532r31
-14N4*Max_Stack_Size 15r38 14|75r26 109r25 160r25 182r25 225r25 269r25 317r25
+. 39r22 69r22 103r22 351r22 416r22 453r22 509r11 523r40 532r14 532r31
+14N4*Max_Stack_Size 15r38 14|79r26 113r25 164r25 186r25 229r25 271r25 317r25
 . 367r25 467r26
 15A9*Operand_Stack(integer)<integer> 33r26 40r26 45r26 50r26 55r26 61r26
-. 67r26 75r26 99r26 14|67r26 101r26 152r26 174r26 217r26 259r26 307r26 353r26
+. 67r26 75r26 99r26 14|71r26 105r26 156r26 178r26 221r26 263r26 309r26 353r26
 . 455r26
 16U14*Handle_Unlock 17>7 18>7 19>7 20=7 21>7 14|11b14 37l8 37t21
 17r7 S{18|18R9[13]} 14|12b7 22r59
@@ -156,50 +157,50 @@ X 13 calculatorcommands.ads
 19i7 MasterPIN{21|3I9} 14|14b7 28r54
 20b7 Unlocked{boolean} 14|15b7 29m16
 21i7 Numtokens{natural} 14|16b7 18r49
-23U14*Handle_Lock 24>7 25>7 26=7 27=7 28>7 14|38b14 62l8 62t19
+23U14*Handle_Lock 24>7 25>7 26=7 27=7 28>7 14|38b14 66l8 66t19
 24r7 S{18|18R9[13]} 14|39b7 49r59
 25a7 T{20|10A9} 14|40b7 45r10 45r30 49r62
-26i7 MasterPIN{21|3I9} 14|41b7 56m16
-27b7 Unlocked{boolean} 14|42b7 57m16
+26i7 MasterPIN{21|3I9} 14|41b7 56r54 59m19
+27b7 Unlocked{boolean} 14|42b7 60m19
 28i7 Numtokens{natural} 14|43b7 45r49
-30U14*Handle_Push1 31>7 32>7 33=7 34=7 35>7 14|64b14 96l8 96t20
-31r7 S{18|18R9[13]} 14|65b7 79r59
-32a7 T{20|10A9} 14|66b7 73r10 73r30 79r62
-33a7 Stack{15A9} 14|67b7 89m19
-34i7 Stack_Top{natural} 14|68b7 75r13 88m19 88r32 89r26
-35i7 Numtokens{natural} 14|69b7 73r49
-37U14*Handle_Push2 38>7 39>7 40=7 41=7 42>7 14|98b14 149l8 149t20
-38r7 S{18|18R9[13]} 14|99b7 119r60 120r60
-39a7 T{20|10A9} 14|100b7 107r33 107r53 111r13 112r17 113r17 114r17 119r63
-. 120r63
-40a7 Stack{15A9} 14|101b7 136m19 138m19
-41i7 Stack_Top{natural} 14|102b7 109r13 135m19 135r32 136r26 137m19 137r32
-. 138r26
-42i7 NumTokens{natural} 14|103b7 107r10
-44U14*Handle_Pop 45=7 46=7 47>7 14|151b14 171l8 171t18
-45a7 Stack{15A9} 14|152b7 165r24 166m10
-46i7 Stack_Top{natural} 14|153b7 158r10 160r13 165r31 166r17 167m10 167r23
-47i7 NumTokens{natural} 14|154b7 162r13
-49U14*Handle_Add 50=7 51=7 52>7 14|173b14 214l8 214t18
-50a7 Stack{15A9} 14|174b7 185r15 186m10 188r15 189m10 203m10
-51i7 Stack_Top{natural} 14|175b7 180r10 182r13 185r22 186r17 187m10 187r23
-. 188r22 189r17 190m10 190r23 202m10 202r23 203r17
-52b7 Unlocked{boolean} 53r17 14|176b7
-54U14*Handle_Subtract 55=7 56=7 57>7 14|216b14 256l8 256t23
-55a7 Stack{15A9} 14|217b7 228r15 229m10 231r15 232m10 246m10
-56i7 Stack_Top{natural} 14|218b7 223r10 225r13 228r22 229r17 230m10 230r23
-. 231r22 232r17 233m10 233r23 245m10 245r23 246r17
-57b7 Unlocked{boolean} 58r17 14|219b7
-60U14*Handle_Multiply 61=7 62=7 63>7 14|258b14 304l8 304t23
-61a7 Stack{15A9} 14|259b7 272r15 273m10 275r15 276m10 292m16
-62i7 Stack_Top{natural} 14|260b7 267r13 269r13 272r22 273r17 274m10 274r23
-. 275r22 276r17 277m10 277r23 291m16 291r29 292r23
-63b7 Unlocked{boolean} 64r17 14|261b7 265r14
-66U14*Handle_Divide 67=7 68=7 69>7 14|306b14 348l8 348t21
-67a7 Stack{15A9} 14|307b7 320r15 321m10 323r15 324m10 338m10
-68i7 Stack_Top{natural} 14|308b7 315r13 317r13 320r22 321r17 322m10 322r23
+30U14*Handle_Push1 31>7 32>7 33=7 34=7 35>7 14|68b14 100l8 100t20
+31r7 S{18|18R9[13]} 14|69b7 83r59
+32a7 T{20|10A9} 14|70b7 77r10 77r30 83r62
+33a7 Stack{15A9} 14|71b7 93m19
+34i7 Stack_Top{natural} 14|72b7 79r13 92m19 92r32 93r26
+35i7 Numtokens{natural} 14|73b7 77r49
+37U14*Handle_Push2 38>7 39>7 40=7 41=7 42>7 14|102b14 153l8 153t20
+38r7 S{18|18R9[13]} 14|103b7 123r60 124r60
+39a7 T{20|10A9} 14|104b7 111r33 111r53 115r13 116r17 117r17 118r17 123r63
+. 124r63
+40a7 Stack{15A9} 14|105b7 140m19 142m19
+41i7 Stack_Top{natural} 14|106b7 113r13 139m19 139r32 140r26 141m19 141r32
+. 142r26
+42i7 NumTokens{natural} 14|107b7 111r10
+44U14*Handle_Pop 45=7 46=7 47>7 14|155b14 175l8 175t18
+45a7 Stack{15A9} 14|156b7 169r24 170m10
+46i7 Stack_Top{natural} 14|157b7 162r10 164r13 169r31 170r17 171m10 171r23
+47i7 NumTokens{natural} 14|158b7 166r13
+49U14*Handle_Add 50=7 51=7 52>7 14|177b14 218l8 218t18
+50a7 Stack{15A9} 14|178b7 189r15 190m10 192r15 193m10 207m10
+51i7 Stack_Top{natural} 14|179b7 184r10 186r13 189r22 190r17 191m10 191r23
+. 192r22 193r17 194m10 194r23 206m10 206r23 207r17
+52b7 Unlocked{boolean} 53r17 14|180b7
+54U14*Handle_Subtract 55=7 56=7 57>7 14|220b14 260l8 260t23
+55a7 Stack{15A9} 14|221b7 232r15 233m10 235r15 236m10 250m10
+56i7 Stack_Top{natural} 14|222b7 227r10 229r13 232r22 233r17 234m10 234r23
+. 235r22 236r17 237m10 237r23 249m10 249r23 250r17
+57b7 Unlocked{boolean} 58r17 14|223b7
+60U14*Handle_Multiply 61=7 62=7 63>7 14|262b14 306l8 306t23
+61a7 Stack{15A9} 14|263b7 274r15 275m10 277r15 278m10 294m16
+62i7 Stack_Top{natural} 14|264b7 269r10 271r13 274r22 275r17 276m10 276r23
+. 277r22 278r17 279m10 279r23 293m16 293r29 294r23
+63b7 Unlocked{boolean} 64r17 14|265b7
+66U14*Handle_Divide 67=7 68=7 69>7 14|308b14 348l8 348t21
+67a7 Stack{15A9} 14|309b7 320r15 321m10 323r15 324m10 338m10
+68i7 Stack_Top{natural} 14|310b7 315r10 317r13 320r22 321r17 322m10 322r23
 . 323r22 324r17 325m10 325r23 337m10 337r23 338r17
-69b7 Unlocked{boolean} 70r17 14|309b7 313r14
+69b7 Unlocked{boolean} 70r17 14|311b7
 72U14*Handle_StoreTo 73>7 74>7 75=7 76=7 77>7 78>7 79=7 14|350b14 401l8 401t22
 73r7 S{18|18R9[13]} 14|351b7 371r65
 74a7 T{20|10A9} 14|352b7 361r33 361r53 363r13 363r37 371r68
@@ -227,39 +228,41 @@ X 13 calculatorcommands.ads
 101b7 Unlocked{boolean} 104r17 14|457b7
 102i7 NumTokens{natural} 14|458b7 463r10
 103r7 Mem{17|13R9} 14|459b7 484r46 489r56
-105V13*Get_Token_String{string} 106>7 106>27 14|22s41 49s41 79s41 119s42
-. 120s42 371s47 428s47 471s47 508b13 533l8 533t24
+105V13*Get_Token_String{string} 106>7 106>27 14|22s41 49s41 83s41 123s42
+. 124s42 371s47 428s47 471s47 508b13 533l8 533t24
 106r7 S{18|18R9[13]} 14|509b7 523r54 532r48
 106r27 Tok{20|5R9} 14|509b27 511r40 512r39
+108V13*Trim_Trailing_Spaces{string} 108>35 14|535b13 551l8 551t28
+108a35 Input{string} 14|535b35 536r35 538r24 539r13 545r27 549r17 549r24
 X 14 calculatorcommands.adb
 22a13 RawPIN{string} 24r16 25r38 28r45
 25e33 C=25:38{character} 25r48
-49a13 RawPIN{string} 51r16 52r38 56r46
+49a13 RawPIN{string} 51r16 52r38 56r45 59r49
 52e33 C=52:38{character} 52r48
-71N7 Max_Len 81r58
-79a13 RawVal{string} 81r16 81r42 86r50
-85i19 Val{integer} 89r40 91r49
-105N7 Max_Len 123r40 125r40
-119a13 RawVal1{string} 122r16 123r23 131r50
-120a13 RawVal2{string} 124r23 125r23 133r50
-130i19 Val1{integer} 136r40 141r39
-132i19 Val2{integer} 138r40 143r39
-156i7 Popped_Val{integer} 165m10 169r40
-178i7 A{integer} 188m10 193r13 193r47 196r16 196r51 201r20 207r30
-178i10 B{integer} 185m10 193r28 196r31 201r24 209r30
-178i13 Result{integer} 201m10 203r31 211r30
-221i7 A{integer} 231m10 236r28 239r31 244r20 250r30
-221i10 B{integer} 228m10 236r13 236r47 239r16 239r51 244r24 252r30
-221i13 Result{integer} 244m10 246r31 254r30
-263i7 A{integer} 275m10 280r67 296r36
-263i10 B{integer} 272m10 281r67 298r36
-263i13 Result{integer} 290m16 292r37 300r36
-280i13 Wide_A{long_long_integer} 282r48
-281i13 Wide_B{long_long_integer} 282r57
-282i13 Wide_Result{long_long_integer} 284r16 285r23 290r35
-311i7 A{integer} 323m10 331r16 336r20 342r30
-311i10 B{integer} 320m10 328r13 331r43 336r24 344r30
-311i13 Result{integer} 336m10 338r31 346r30
+75N7 Max_Len 85r58
+83a13 RawVal{string} 85r16 85r42 90r50
+89i19 Val{integer} 93r40 95r49
+109N7 Max_Len 127r40 129r40
+123a13 RawVal1{string} 126r16 127r23 135r50
+124a13 RawVal2{string} 128r23 129r23 137r50
+134i19 Val1{integer} 140r40 145r39
+136i19 Val2{integer} 142r40 147r39
+160i7 Popped_Val{integer} 169m10 173r40
+182i7 A{integer} 192m10 197r13 197r47 200r16 200r51 205r20 211r30
+182i10 B{integer} 189m10 197r28 200r31 205r24 213r30
+182i13 Result{integer} 205m10 207r31 215r30
+225i7 A{integer} 235m10 240r28 243r31 248r20 254r30
+225i10 B{integer} 232m10 240r13 240r47 243r16 243r51 248r24 256r30
+225i13 Result{integer} 248m10 250r31 258r30
+267i7 A{integer} 277m10 282r67 298r36
+267i10 B{integer} 274m10 283r67 300r36
+267i13 Result{integer} 292m16 294r37 302r36
+282i13 Wide_A{long_long_integer} 284r48
+283i13 Wide_B{long_long_integer} 284r57
+284i13 Wide_Result{long_long_integer} 286r16 287r23 292r35
+313i7 A{integer} 323m10 331r16 336r20 342r30
+313i10 B{integer} 320m10 328r13 331r43 336r24 344r30
+313i13 Result{integer} 336m10 338r31 346r30
 359i7 RawIndex_Int{integer} 376m16 377r19 377r44 382r52 394r42
 371a13 RawIndex_Str{string} 373r16 376r61
 381i22 Loc{17|8I12} 388r44
@@ -275,6 +278,8 @@ X 14 calculatorcommands.adb
 512i7 Token_Len{natural} 516r10 521r60
 513i7 Temp_End{long_long_integer} 520m7 523r10 524r17 525r17 530r27
 514i7 End_Pos{natural} 530m7 532r62
+536i7 Last_Non_Space{integer} 540m13 545r10 549r39
+538i11 I{integer} 539r20 540r31
 X 15 interfac.ads
 52I9*Integer_32<integer>
 X 17 memorystore.ads
@@ -294,24 +299,25 @@ X 18 mystring.ads
 14i4 Max_MyString_Length{positive} 13|13r35
 17k9*MyString 13|5w6 13r25 14|5w6 18|60e13
 18R9*MyString 13|17r28[13] 24r28[13] 31r28[13] 38r28[13] 73r28[13] 89r28[13]
-. 97r28[13] 106r17[13] 14|12r28[13|13] 39r28[13|13] 65r28[13|13] 99r28[13|13]
+. 97r28[13] 106r17[13] 14|12r28[13|13] 39r28[13|13] 69r28[13|13] 103r28[13|13]
 . 351r28[13|13] 416r28[13|13] 453r28[13|13] 509r17[13|13]
 20V13*To_String{string} 14|532s20[13|13]
 35V13*Length{natural} 14|523s46[13|13]
 38V13*Substring{18R9[13|13]} 14|532s37[13|13]
 X 20 mystringtokeniser.ads
 3K9*MyStringTokeniser 13|4w6 18r22 25r22 32r22 39r22 74r22 90r22 98r22 106r33
-. 14|6w6 13r22 40r22 66r22 100r22 352r22 417r22 454r22 509r33 20|25e22
+. 14|6w6 13r22 40r22 70r22 104r22 352r22 417r22 454r22 509r33 20|25e22
 5R9*TokenExtent 13|106r51 14|509r51 20|8e14
-6i7*Start{positive} 14|111r19 113r23 363r19 465r19 511r44
-7i7*Length{natural} 14|112r23 114r23 363r43 465r43 512r43
+6i7*Start{positive} 14|115r19 117r23 363r19 465r19 511r44
+7i7*Length{natural} 14|116r23 118r23 363r43 465r43 512r43
 10A9*TokenArray(5R9)<integer> 13|18r40 25r40 32r40 39r40 74r40 90r40 98r40
-. 14|13r40 40r40 66r40 100r40 352r40 417r40 454r40
+. 14|13r40 40r40 70r40 104r40 352r40 417r40 454r40
 X 21 pin.ads
-1K9*PIN 13|3w6 19r22 26r26 14|4w6 14r22 28r19 28r28 41r26 56r29 21|13e8
+1K9*PIN 13|3w6 19r22 26r26 14|4w6 14r22 28r19 28r28 41r26 56r19 56r28 59r32
+. 21|13e8
 3I9*PIN<integer> 13|19r26 26r30 14|14r26 41r30
-5V13*From_String{3I9} 14|28s32 56s33
+5V13*From_String{3I9} 14|28s32 56s32 59s36
 X 22 stringtointeger.ads
-3K9*StringToInteger 13|8w6 14|86r21 131r21 133r21 376r32 433r32 476r32 22|8e20
-6V13*From_String{integer} 14|86s37 131s37 133s37 376s48 433s48 476s48
+3K9*StringToInteger 13|8w6 14|90r21 135r21 137r21 376r32 433r32 476r32 22|8e20
+6V13*From_String{integer} 14|90s37 135s37 137s37 376s48 433s48 476s48
 

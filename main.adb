@@ -67,7 +67,8 @@ begin
          return;
       end if;
       T := (others => (Start => 1, Length => 0));
-      MyStringTokeniser.Tokenise (Lines.To_String (S), T, NumTokens);
+      MyStringTokeniser.Tokenise
+        (Trim_Trailing_Spaces (Lines.To_String (S)), T, NumTokens);
       if NumTokens /= 0 then
          declare
             Cmd : constant String := Get_Token_String (S, T (1));
