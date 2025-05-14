@@ -550,7 +550,7 @@ package body CalculatorCommands is
       Last_Non_Space : Integer := Input'First - 1;
    begin
       for I in reverse Input'Range loop
-         if Input (I) /= ' ' then
+         if Input (I) /= ' ' and then Input (I) /= ASCII.HT then
             Last_Non_Space := I;
             exit;
          end if;
