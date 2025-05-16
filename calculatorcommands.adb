@@ -6,7 +6,9 @@ with MyString;
 with MyStringTokeniser;
 with Ada.Long_Long_Integer_Text_IO;
 
-package body CalculatorCommands is
+package body CalculatorCommands
+  with SPARK_Mode
+is
    --package Lines is new MyString (Max_MyString_Length => 2048);
    procedure Handle_Unlock
      (S         : in Lines.MyString;
