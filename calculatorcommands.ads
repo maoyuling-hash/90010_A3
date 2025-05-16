@@ -9,7 +9,9 @@ with StringToInteger;
 with Ada.Text_IO;         use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 
-package CalculatorCommands is
+package CalculatorCommands
+  with SPARK_Mode
+is
    package Lines is new MyString (Max_MyString_Length => 2048);
    Max_Stack_Size : constant := 512;
    type Operand_Stack is array (1 .. Max_Stack_Size) of Integer;
